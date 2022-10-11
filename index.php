@@ -40,6 +40,7 @@
                 url:"<?=$url?>",
                 success:function(dados){
                     $(".CorpoApp").html(dados);
+                    Carregando('none');
                 }
             });
         })
