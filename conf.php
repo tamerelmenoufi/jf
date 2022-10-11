@@ -1,2 +1,2 @@
 <?php
-   echo "{$_SERVER['DOCUMENT_ROOT']}/bkos/lib/vendor/wapp/send.php";
+   echo "{$_SERVER['DOCUMENT_ROOT']}/js/lib/vendor/wapp/send.php";
