@@ -1,5 +1,5 @@
 <?php
-    include("{$_SERVER['DOCUMENT_ROOT']}/bkos/lib/includes.php");
+    include("{$_SERVER['DOCUMENT_ROOT']}/jf/lib/includes.php");
 
     if($_GET['s']){
         $_SESSION = [];
@@ -7,13 +7,8 @@
         exit();
     }
 
-    if($_SESSION['BkOsPerfil'] == 'adm'){
-        $url = "src/home/index.php";
-    }else if($_SESSION['BkOsPerfil'] == 'os'){
-        $url = "src/home/os.php";
-    }else{
-        $url = "src/login/index.php";
-    }
+    $url = "src/index.php";
+
 ?>
 <!doctype html>
 <html lang="en">
@@ -21,7 +16,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/x-icon" href="img/icone.png">
-    <title>Gestão de Ordens de Serviços</title>
+    <title>JF Consultoria</title>
     <?php
     include("lib/header.php");
     ?>
