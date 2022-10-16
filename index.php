@@ -7,7 +7,12 @@
         exit();
     }
 
-    $url = "src/index.php";
+    if($_SESSION['usuario']){
+        $url = "src/home/index.php";
+    }else{
+        $url = "src/login/index.php";
+    }
+
 
 ?>
 <!doctype html>
