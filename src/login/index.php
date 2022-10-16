@@ -2,7 +2,7 @@
     include("{$_SERVER['DOCUMENT_ROOT']}/jf/lib/includes.php");
 ?>
 
-<div class="col">
+<div class="col" style="margin-top:90px;">
     <div class="offset-md-4 col-md-4">
 
         <h1>Faça Seu Login</h1>
