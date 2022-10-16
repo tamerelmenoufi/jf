@@ -6,7 +6,7 @@
     <div class="offset-md-4 col-md-4">
         <div class="card m-3 p-3">
             <div class="card-body">
-                <h1>Faça Seu Login</h1>
+                <h3>Faça Seu Login</h3>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Email address</label>
                     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
