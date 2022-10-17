@@ -23,15 +23,15 @@
                     <input type="checkbox" class="form-check-input" id="conectado">
                     <label class="form-check-label" for="conectado">Menter-me conectado</label>
                 </div>
-                <button type="button" class="btn btn-primary">Entrar</button>
-                <div id="login" class="form-text">Recuperar meus dados de acesso</div>
+                <button id="entrar" type="button" class="btn btn-primary">Entrar</button>
+                <div id="recuperar_senha" class="form-text">Recuperar meus dados de acesso</div>
             </div>
         </div>
     </div>
 </div>
 <script>
     $(function(){
-        $("#login").click(function(){
+        $("#entrar").click(function(){
             Carregando();
             $.ajax({
                 url:"src/home/index.php",
