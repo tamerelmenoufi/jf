@@ -2,7 +2,7 @@
     include("{$_SERVER['DOCUMENT_ROOT']}/jf/lib/includes.php");
 ?>
 <style>
-    #login{
+    #recuperar_senha{
         cursor:pointer;
     }
 </style>
