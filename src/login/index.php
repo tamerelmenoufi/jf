@@ -13,11 +13,11 @@
                 <h3>Faça Seu Login</h3>
                 <div class="mb-3">
                     <label for="login" class="form-label">Login</label>
-                    <input type="text" class="form-control" id="login" aria-describedby="login">
+                    <input type="text" autocomplete="off" class="form-control" id="login" aria-describedby="login">
                 </div>
                 <div class="mb-3">
                     <label for="senha" class="form-label">Senha</label>
-                    <input type="password" class="form-control" id="senha">
+                    <input type="password" autocomplete="off" class="form-control" id="senha">
                 </div>
                 <div class="mb-3 form-check">
                     <input type="checkbox" class="form-check-input" id="conectado">
