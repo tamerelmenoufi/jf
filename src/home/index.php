@@ -72,13 +72,13 @@
                 $result = mysqli_query($con, $query);
 
                 while($d = mysqli_fetch_object($result)){
-                    // $descricao = str_replace(array('-','_','.pdf'), " ",$d->descricao);
-                    $descricao = explode(".",$d->descricao);
-                    $descricao = $descricao[0];
+                    $tipo = str_replace(array('-','_'), " ",$d->tipo);
+                    $desci = explode(".",$d->desci);
+                    $desci = $desci[0];
                 ?>
                 <div class="card-body">
-                    <h5 class="card-title"><?=$d->tipo?></h5>
-                    <p class="card-text">Forma detectados estrutura de arquivos SHAPEFILE para <b><?=strtoupper($d->desci)?></b>.</p>
+                    <h5 class="card-title"><?=$tipo?></h5>
+                    <p class="card-text">Forma detectados estrutura de arquivos SHAPEFILE para <b><?=strtoupper($desci)?></b>.</p>
                 </div>
                 <?php
                 }
