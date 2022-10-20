@@ -16,7 +16,7 @@
                 ?>
                 <div class="card-body">
                     <h5 class="card-title"><?=$d->titulo?> - <?=$d->subtitulo?></h5>
-                    <p class="card-text">Forma detectados registros de arquivos para <b><?=($d->descricao)?></b>.</p>
+                    <p class="card-text">Forma detectados registros de arquivos para <b><?=($descricao)?></b>.</p>
                 </div>
                 <?php
                 }
