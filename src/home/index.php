@@ -81,6 +81,14 @@
                 <div class="tab-pane fade show active p-3" id="EstruturaDados" role="tabpanel" aria-labelledby="home-tab" tabindex="0"></div>
             </div>
         </div>
+
+
+
+        <div class="col-12">
+            <div class="m-3">
+                <img src="img/estrutura_bd.jpg" style="width:100%;" />
+            </div>
+        </div>
     </div>
 </div>
 
