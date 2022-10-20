@@ -16,7 +16,7 @@
                 ?>
                 <div class="card-body">
                     <h5 class="card-title"><?=$d->tipo?> - <?=$d->local?></h5>
-                    <p class="card-text">Forma detectados registros de arquivos de imagens para <b><?=($ddescricao)?></b>.</p>
+                    <p class="card-text">Forma detectados registros de arquivos de imagens para <b><?=($descricao)?></b>.</p>
                 </div>
                 <?php
                 }
