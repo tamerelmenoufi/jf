@@ -2,7 +2,13 @@
     include("{$_SERVER['DOCUMENT_ROOT']}/jf/lib/includes.php");
 ?>
 
-
+<style>
+    #EstruturaDados{
+        border-left:solid #dee2e6 1px;
+        border-right:solid #dee2e6 1px;
+        border-bottom:solid #dee2e6 1px;
+    }
+</style>
 <?php
 
     $paginas = [
