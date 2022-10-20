@@ -10,11 +10,12 @@
     $result = mysqli_query($con, $query);
 
     while($d = mysqli_fetch_object($result)){
-        $descricao = str_replace(array('-','_','.pdf'), " ",$d->descricao);
+        // $descricao = str_replace(array('-','_','.pdf'), " ",$d->descricao);
+        $descricao = (($d->categoria)?:'Livro Tombo Completo');
     ?>
     <div class="card-body">
         <h5 class="card-title"><?=$descricao?></h5>
-        <p class="card-text">Para os libros tombo <b><?=$descricao?></b> forma detectados <b><?=$d->quantidade?></b> documentos.</p>
+        <p class="card-text">Para os livros tombo <b><?=$descricao?></b> forma detectados <b><?=$d->quantidade?></b> documentos.</p>
     </div>
     <?php
     }
