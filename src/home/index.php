@@ -78,7 +78,7 @@
                 ?>
                 <div class="card-body">
                     <h5 class="card-title"><?=$tipo?></h5>
-                    <p class="card-text">Forma detectados estrutura de arquivos SHAPEFILE para <b><?=strtoupper($desci)?></b>.</p>
+                    <p class="card-text">Forma detectados estrutura de arquivos SHAPEFILE para <b><?=($desci)?></b>.</p>
                 </div>
                 <?php
                 }
