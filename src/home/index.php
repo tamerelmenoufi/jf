@@ -25,7 +25,7 @@
             'url' => 'lista_titulos_plotados.php'
         ],
         [
-            'titulo' => 'Daodos Fundiários',
+            'titulo' => 'Dados Fundiários',
             'url' => 'dados_fundiarios.php'
         ],
         [

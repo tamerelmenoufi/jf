@@ -4,10 +4,10 @@
 
             <div class="card">
                 <div class="card-header">
-                Dados Fundiários
+                Loteamento Incra
                 </div>
                 <?php
-                $query = "SELECT *, count(*), SUBSTRING_INDEX(descricao, '.', 1) as desci FROM `dados_fundiarios` group by titulo,local,tipo,desci";
+                $query = "SELECT * FROM `loteamento_incra` group by lote_sequencia, lote";
                 $result = mysqli_query($con, $query);
 
                 while($d = mysqli_fetch_object($result)){
@@ -15,8 +15,8 @@
                     $desci = str_replace(array('-','_'), " ",$desci[0]);
                 ?>
                 <div class="card-body">
-                    <h5 class="card-title"><?=$d->titulo?> - <?=$d->local?> (<?=$d->tipo?>)</h5>
-                    <p class="card-text">Forma detectados estrutura de arquivos SHAPEFILE para <b><?=($desci)?></b>.</p>
+                    <h5 class="card-title"><?=(($d->lote_sequencia)?:'Não Identificado')?></h5>
+                    <p class="card-text">Forma detectados registros de arquivos PDF para <b><?=($d->lote)?></b>.</p>
                 </div>
                 <?php
                 }
