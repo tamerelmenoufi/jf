@@ -2,7 +2,6 @@
     include("{$_SERVER['DOCUMENT_ROOT']}/jf/lib/includes.php");
 ?>
 
-        <div class="col-12 m-3">
             <div class="card">
                 <div class="card-header">
                 LIVROS TOMBO
@@ -23,4 +22,3 @@
                 }
                 ?>
             </div>
-        </div>

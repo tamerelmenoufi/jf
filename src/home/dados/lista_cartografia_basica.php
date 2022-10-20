@@ -3,7 +3,6 @@
 ?>
 
         <!-- SESSÂO CARTOGRAFIA BÁSICA -->
-        <div class="col-12 m-3">
             <div class="card">
                 <div class="card-header">
                 Lista Cartografia Básica
@@ -25,6 +24,5 @@
                 }
                 ?>
             </div>
-        </div>
 
 
