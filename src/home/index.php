@@ -3,7 +3,8 @@
 ?>
 <div class="container">
     <div class="row">
-        <div class="col m-3">
+        <!-- SESSÂO LIVRO TOMBO -->
+        <div class="col-12 m-3">
             <div class="card">
                 <div class="card-header">
                 LIVROS TOMBO
@@ -25,5 +26,34 @@
                 ?>
             </div>
         </div>
+
+
+
+        <!-- SESSÂO CARTOGRAFIA BÁSICA -->
+        <div class="col-12 m-3">
+            <div class="card">
+                <div class="card-header">
+                Lista Cartografia Básica
+                </div>
+                <?php
+                $query = "SELECT *, count(*), replace(descricao,SUBSTR(descricao, -4),'') as desci FROM `cartografia_basica` where descricao != 'Thumbs.db' group by titulo,desci";
+                $result = mysqli_query($con, $query);
+
+                while($d = mysqli_fetch_object($result)){
+                    // $descricao = str_replace(array('-','_','.pdf'), " ",$d->descricao);
+                    $descricao = explode(".",$d->descricao);
+                    $descricao = $descricao[0];
+                ?>
+                <div class="card-body">
+                    <h5 class="card-title"><?=$d->titulo?></h5>
+                    <p class="card-text">Forma detectados estrutura de arquivos SHAPEFILE para <b><?=strtoupper($descricao)?></b>.</p>
+                </div>
+                <?php
+                }
+                ?>
+            </div>
+        </div>
+
+
     </div>
 </div>
