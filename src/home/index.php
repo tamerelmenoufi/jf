@@ -74,7 +74,7 @@
                 while($d = mysqli_fetch_object($result)){
                     $tipo = str_replace(array('-','_'), " ",$d->tipo);
                     $desci = explode(".",$d->desci);
-                    $desci = $desci[0];
+                    $desci = str_replace(array('-','_'), " ",$desci[0]);
                 ?>
                 <div class="card-body">
                     <h5 class="card-title"><?=$tipo?></h5>
