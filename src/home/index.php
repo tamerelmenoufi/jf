@@ -95,9 +95,11 @@
                         <div class="row">
                             <div class="col-md-6" style="text-align:center;">
                                 <img src="img/phpmyadmin.png" style="width:90%; background-color:#eee; border-radius:7px;" />
+                                <p style="margin-top:10px;">Gerenciandor do banco de dados e estrutura de informações do sistema.</p>
                             </div>
                             <div class="col-md-6" style="text-align:center;">
                                 <img src="img/pgadmin.png" style="width:90%; background-color:#eee; border-radius:7px;" />
+                                <p style="margin-top:10px;">Gerenciandor do banco de dados Geográficos e informações relacionadas.</p>
                             </div>
                         </div>
                     </div>
