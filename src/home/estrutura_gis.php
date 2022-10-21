@@ -27,14 +27,6 @@
 
 <script>
     $(function(){
-        $("button[url]").click(function(){
-            url = $(this).attr("url");
-            $.ajax({
-                url:`src/home/dados/${url}`,
-                success:function(dados){
-                    $("#EstruturaDados").html(dados);
-                }
-            });
-        });
+
     })
 </script>

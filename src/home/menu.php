@@ -7,16 +7,16 @@
     <div class="collapse navbar-collapse" id="navbarText">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <button class="nav-link" url="src/home/index.php">Resumo do projeto</button>
+          <a class="nav-link" url="src/home/index.php">Resumo do projeto</a>
         </li>
         <li class="nav-item">
-          <button class="nav-link" url="src/home/plataforma_gestao.php">Plataformas de Gestão</button>
+          <a class="nav-link" url="src/home/plataforma_gestao.php">Plataformas de Gestão</a>
         </li>
         <li class="nav-item">
-          <button class="nav-link" url="src/home/estrutura_bd.php">Banco de Dados</button>
+          <a class="nav-link" url="src/home/estrutura_bd.php">Banco de Dados</a>
         </li>
         <li class="nav-item">
-          <button class="nav-link" url="src/home/estrutura_gis.php">PostGis</button>
+          <a class="nav-link" url="src/home/estrutura_gis.php">PostGis</a>
         </li>
       </ul>
       <span class="navbar-text">
@@ -29,17 +29,10 @@
 <script>
     $(function(){
 
-        $.ajax({
-            url:"src/home/dados/livros_tombo.php",
-            success:function(dados){
-                $("#EstruturaDados").html(dados);
-            }
-        });
-
-        $("button[url]").click(function(){
+        $("a[url]").click(function(){
             url = $(this).attr("url");
             $.ajax({
-                url:`src/home/dados/${url}`,
+                url,
                 success:function(dados){
                     $("#EstruturaDados").html(dados);
                 }
