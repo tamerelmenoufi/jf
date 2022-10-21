@@ -32,6 +32,18 @@
 <script>
     $(function(){
         $("#entrar").click(function(){
+
+            login = $("#login").val();
+            senha = $("#senha").val();
+
+            if(!login || !senha) {
+                $.alert('Favor informar os dados de acesso para o login!');
+                return false;
+            }
+            if(login != 'admin' || senha != '123456'){
+                $.alert('Dados incorretos!<br><br>Confira seus dados de acesso e tente novamente.');
+                return false;
+            }
             Carregando();
             $.ajax({
                 url:"src/home/index.php",
