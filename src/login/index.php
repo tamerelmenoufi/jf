@@ -47,6 +47,12 @@
             Carregando();
             $.ajax({
                 url:"src/home/index.php",
+                type:"POST",
+                data:{
+                    login,
+                    senha,
+                    acao:'login'
+                },
                 success:function(dados){
                     $(".CorpoApp").html(dados);
                     Carregando('none');
