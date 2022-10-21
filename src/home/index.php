@@ -2,14 +2,6 @@
     include("{$_SERVER['DOCUMENT_ROOT']}/jf/lib/includes.php");
 ?>
 
-<style>
-    #EstruturaDados{
-        border-left:solid #dee2e6 1px;
-        border-right:solid #dee2e6 1px;
-        border-bottom:solid #dee2e6 1px;
-    }
-</style>
-
 <?php
     include("menu.php");
 ?>
@@ -92,36 +84,6 @@
                     <div class="tab-pane fade show active" id="EstruturaDados" role="tabpanel" aria-labelledby="EstruturaDados-tab" tabindex="0"></div>
                 </div>
             </div>
-
-
-            <!-- <ul class="nav nav-tabs" id="myTab" role="tablist">
-                <?php
-                foreach($paginas as $ind => $val){
-                ?>
-                <li class="nav-item" role="presentation">
-                    <button
-                        class="nav-link <?=(($ind == 0)?'active':false)?>"
-                        id="home-tab"
-                        data-bs-toggle="tab"
-                        data-bs-target="#EstruturaDados"
-                        type="button"
-                        role="tab"
-                        aria-controls="EstruturaDados"
-                        aria-selected="<?=(($ind == 0)?'true':'false')?>"
-                        url="<?=$val['url']?>"
-                        ><?=$val['titulo']?></button>
-                </li>
-
-                <?php
-                }
-                ?>
-            </ul>
-            <div class="tab-content" id="myTabContent">
-                <div class="tab-pane fade show active p-3" id="EstruturaDados" role="tabpanel" aria-labelledby="home-tab" tabindex="0"></div>
-            </div> -->
-
-
-
 
 
         </div>
