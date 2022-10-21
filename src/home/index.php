@@ -80,7 +80,7 @@
                         }
                     ?>
                 </div>
-                <div class="tab-content" id="v-pills-tabContent" style="position:relative; width:100%; height:100%;">
+                <div class="tab-content" id="v-pills-tabContent" style="position:absolute; top:0; bottom:0;">
                     <div
                         class="tab-pane fade show active"
                         id="EstruturaDados"
