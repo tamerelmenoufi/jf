@@ -93,11 +93,11 @@
                     </div>
                     <div class="card-body">
                         <div class="row">
-                            <div class="col-md-6">
-                                <img src="img/phpmyadmin.png" style="width:100%;" />
+                            <div class="col-md-6" style="text-align:center;">
+                                <img src="img/phpmyadmin.png" style="width:90%; background-color:#eee; border-radius:7px;" />
                             </div>
-                            <div class="col-md-6">
-                                <img src="img/pgadmin.png" style="width:100%;" />
+                            <div class="col-md-6" style="text-align:center;">
+                                <img src="img/pgadmin.png" style="width:90%; background-color:#eee; border-radius:7px;" />
                             </div>
                         </div>
                     </div>
