@@ -21,10 +21,10 @@
                 </div>
                 <div class="mb-3 form-check">
                     <input type="checkbox" class="form-check-input" id="conectado">
-                    <label class="form-check-label" for="conectado">Menter-me conectado</label>
+                    <!-- <label class="form-check-label" for="conectado">Menter-me conectado</label> -->
                 </div>
                 <button id="entrar" type="button" class="btn btn-primary">Entrar</button>
-                <div id="recuperar_senha" class="form-text">Recuperar meus dados de acesso</div>
+                <!-- <div id="recuperar_senha" class="form-text">Recuperar meus dados de acesso</div> -->
             </div>
         </div>
     </div>
