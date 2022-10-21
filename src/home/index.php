@@ -83,6 +83,29 @@
         </div>
 
 
+
+
+        <div class="col-12">
+            <div class="m-3">
+                <div class="card">
+                    <div class="card-header">
+                    Gerenciamento de Dados (Banco Mysql e Postgres)
+                    </div>
+                    <div class="card-body">
+                        <div class="col-12">
+                            <div class="col-md-6">
+                                <img src="img/phpmyadmin.png" style="width:100%;" />
+                            </div>
+                            <div class="col-md-6">
+                                <img src="img/pgadmin.png" style="width:100%;" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
         <div class="col-12">
             <div class="m-3">
                 <div class="card">
