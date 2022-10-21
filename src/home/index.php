@@ -87,6 +87,7 @@
                         role="tabpanel"
                         aria-labelledby="EstruturaDados-tab"
                         tabindex="0"
+                        style="max-height:500px; overflow:auto;"
                     ></div>
                 </div>
             </div>
