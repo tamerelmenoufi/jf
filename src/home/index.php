@@ -94,12 +94,12 @@
                     <div class="card-body">
                         <div class="row">
                             <div class="col-md-6" style="text-align:center;">
-                                <img src="img/phpmyadmin.png" style="width:90%; background-color:#eee; border-radius:7px;" />
-                                <p style="margin-top:10px;">Gerenciandor do banco de dados e estrutura de informações do sistema.</p>
+                                <img src="img/phpmyadmin.png" style="width:90%; background-color:#eee; border-radius:7px; cursor:pointer;" />
+                                <p style="margin-top:10px;">Gerenciandor do banco de dados e estrutura de informações do sistema. Acesse <a href='http://consultoria.mohatron.com:8000/' target='_blank'>PhpMyadmin</a></p>
                             </div>
                             <div class="col-md-6" style="text-align:center;">
-                                <img src="img/pgadmin.png" style="width:90%; background-color:#eee; border-radius:7px;" />
-                                <p style="margin-top:10px;">Gerenciandor do banco de dados Geográficos e informações relacionadas.</p>
+                                <img src="img/pgadmin.png" style="width:90%; background-color:#eee; border-radius:7px; cursor:pointer;" />
+                                <p style="margin-top:10px;">Gerenciandor do banco de dados Geográficos e informações relacionadas. Acesse <a href='http://consultoria.mohatron.com:8083/' target='_blank'>PgAdmin</a></p>
                             </div>
                         </div>
                     </div>
