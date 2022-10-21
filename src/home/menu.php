@@ -39,7 +39,7 @@
             $.ajax({
                 url,
                 success:function(dados){
-                    $("#EstruturaDados").html(dados);
+                  $(".CorpoApp").html(dados);
                 }
             });
         });
