@@ -29,7 +29,7 @@
 <script>
     $(function(){
 
-        $("a[url]").click(function(){
+        $("span[url]").click(function(){
             url = $(this).attr("url");
             $.ajax({
                 url,
