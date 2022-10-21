@@ -134,7 +134,7 @@
                     Estrutura do banco de dados Geográficos
                     </div>
                     <div class="card-body">
-                        <img src="img/estrutura_gis.jpg" style="width:100%;" />
+                        <img src="img/estrutura_gis.JPG" style="width:100%;" />
                     </div>
                 </div>
             </div>
