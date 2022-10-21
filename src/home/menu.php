@@ -1,3 +1,8 @@
+<style>
+  span[url]{
+    cursor:pointer;
+  }
+</style>
 <nav class="navbar navbar-expand-lg bg-light">
   <div class="container-fluid">
     <span class="navbar-brand" href="#">CONSULTORIA</span>
