@@ -57,6 +57,26 @@
 
 ?>
 
+
+
+<div class="d-flex align-items-start">
+  <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+    <?php
+        foreach($paginas as $ind => $val){
+    ?>
+    <button class="nav-link <?=(($ind == 0)?'active':false)?>" id="EstruturaDados-tab<?=$ind?>" data-bs-toggle="pill" data-bs-target="#EstruturaDados" type="button" role="tab" aria-controls="EstruturaDados" aria-selected="<?=(($ind == 0)?'true':'false')?>">Home</button>
+    <?php
+        }
+    ?>
+  </div>
+  <div class="tab-content" id="v-pills-tabContent">
+    <div class="tab-pane fade show active" id="EstruturaDados" role="tabpanel" aria-labelledby="EstruturaDados-tab" tabindex="0"></div>
+  </div>
+</div>
+
+
+
+<!--
 <div class="container">
     <div class="row">
         <div class="col-12 m-3">
@@ -88,7 +108,7 @@
         </div>
 
     </div>
-</div>
+</div> -->
 
 <script>
     $(function(){
