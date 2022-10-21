@@ -10,39 +10,9 @@
     }
 </style>
 
-
-<nav class="navbar navbar-expand-lg bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">CONSULTORIA</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarText">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Resumo do projeto</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Plataformas de Gestão</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Banco de Dados</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">PostGis</a>
-        </li>
-      </ul>
-      <span class="navbar-text">
-        Administrador do Sistema
-      </span>
-    </div>
-  </div>
-</nav>
-
-
-
-
-
+<?php
+    include("menu.php");
+?>
 
 <?php
 
@@ -114,64 +84,6 @@
             </ul>
             <div class="tab-content" id="myTabContent">
                 <div class="tab-pane fade show active p-3" id="EstruturaDados" role="tabpanel" aria-labelledby="home-tab" tabindex="0"></div>
-            </div>
-        </div>
-
-
-
-
-        <div class="col-12">
-            <div class="m-3">
-                <div class="card">
-                    <div class="card-header">
-                    Gerenciamento de Dados (Banco Mysql e Postgres)
-                    </div>
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div style="text-align:center; background-color:#eee; border-radius:7px; padding:10px;">
-                                    <a href='http://consultoria.mohatron.com:8000/' target='_blank'><img src="img/phpmyadmin.png" style="width:90%; cursor:pointer;" /></a>
-                                    <p style="margin-top:10px;">Gerenciandor do banco de dados e estrutura de informações do sistema. Acesse <a href='http://consultoria.mohatron.com:8000/' target='_blank'>PhpMyadmin</a></p>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div style="text-align:center; background-color:#eee; border-radius:7px; padding:10px;">
-                                    <a href='http://consultoria.mohatron.com:8083/' target='_blank'><img src="img/pgadmin.png" style="width:90%; cursor:pointer;" /></a>
-                                    <p style="margin-top:10px;">Gerenciandor do banco de dados Geográficos e informações relacionadas. Acesse <a href='http://consultoria.mohatron.com:8083/' target='_blank'>PgAdmin</a></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="col-12">
-            <div class="m-3">
-                <div class="card">
-                    <div class="card-header">
-                    Estrutura do banco de dados
-                    </div>
-                    <div class="card-body">
-                        <img src="img/estrutura_bd.jpg" style="width:100%;" />
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-
-        <div class="col-12">
-            <div class="m-3">
-                <div class="card">
-                    <div class="card-header">
-                    Estrutura do banco de dados Geográficos
-                    </div>
-                    <div class="card-body">
-                        <img src="img/estrutura_gis.JPG" style="width:100%;" />
-                    </div>
-                </div>
             </div>
         </div>
 
