@@ -92,7 +92,7 @@
                     Gerenciamento de Dados (Banco Mysql e Postgres)
                     </div>
                     <div class="card-body">
-                        <div class="col-12">
+                        <div class="row">
                             <div class="col-md-6">
                                 <img src="img/phpmyadmin.png" style="width:100%;" />
                             </div>
