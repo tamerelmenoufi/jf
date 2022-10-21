@@ -80,8 +80,15 @@
                         }
                     ?>
                 </div>
-                <div class="tab-content" id="v-pills-tabContent">
-                    <div class="tab-pane fade show active" id="EstruturaDados" role="tabpanel" aria-labelledby="EstruturaDados-tab" tabindex="0"></div>
+                <div class="tab-content" id="v-pills-tabContent" style="position:relative;">
+                    <div
+                        class="tab-pane fade show active"
+                        id="EstruturaDados"
+                        role="tabpanel"
+                        aria-labelledby="EstruturaDados-tab"
+                        tabindex="0"
+                        style="position:absolute; top:0; bottom:0; overflow:auto;"
+                    ></div>
                 </div>
             </div>
 
