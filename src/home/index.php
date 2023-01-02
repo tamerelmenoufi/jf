@@ -4,6 +4,9 @@
 
 <?php
     include("menu.php");
+    include("menu_esquerdo.php");
+    include("menu_direito.php");
+
 ?>
 
 <?php
@@ -48,8 +51,6 @@
     ];
 
 ?>
-
-
 
 
 

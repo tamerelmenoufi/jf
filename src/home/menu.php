@@ -5,7 +5,13 @@
 </style>
 <nav class="navbar navbar-expand-lg bg-light">
   <div class="container-fluid">
-    <span class="navbar-brand" href="#">CONSULTORIA</span>
+
+    <div data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+      <span class="navbar-brand" href="#">CONSULTORIA</span>
+      <i class="fa-solid fa-bars"></i>
+    </div>
+
+
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
