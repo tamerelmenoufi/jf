@@ -7,8 +7,8 @@
   <div class="container-fluid">
 
     <div data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
-      <span class="navbar-brand" href="#">CONSULTORIA</span>
       <i class="fa-solid fa-bars"></i>
+      <span class="navbar-brand" href="#">CONSULTORIA</span>
     </div>
 
 
