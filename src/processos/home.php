@@ -1,6 +1,15 @@
 <?php
     include("{$_SERVER['DOCUMENT_ROOT']}/jf/lib/includes.php");
 ?>
+
+<style>
+    #myTabContent{
+        border-left:solid 1px #eee;
+        border-right:solid 1px #eee;
+        border-bottom:solid 1px #eee;
+    }
+</style>
+
 <ul class="nav nav-tabs" id="myTab" role="tablist" style="margin-top:50px;">
   <li class="nav-item" role="presentation">
     <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Home</button>
