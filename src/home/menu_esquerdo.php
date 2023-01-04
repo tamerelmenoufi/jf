@@ -4,11 +4,11 @@
     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
   <div class="offcanvas-body">
-    <h5>Project - Barbearia</h5>
+    <h5>Consultoria</h5>
 
     <div class="row mb-1">
       <div class="col">
-        <a url="src/dashboard/index.php" class="text-decoration-none" data-bs-dismiss="offcanvas" aria-label="Close">
+        <a url="src/home/index.php" class="text-decoration-none" data-bs-dismiss="offcanvas" aria-label="Close">
           <i class="fa-solid fa-clipboard-list"></i> Dashboard
         </a>
       </div>
@@ -17,8 +17,8 @@
 
     <div class="row mb-1">
       <div class="col">
-        <a url="src/vendas/index.php" class="text-decoration-none" data-bs-dismiss="offcanvas" aria-label="Close">
-          <i class="fa-solid fa-clipboard-list"></i> Vendas
+        <a url="src/processos/index.php" class="text-decoration-none" data-bs-dismiss="offcanvas" aria-label="Close">
+          <i class="fa-solid fa-clipboard-list"></i> Consultar Processos
         </a>
       </div>
     </div>
