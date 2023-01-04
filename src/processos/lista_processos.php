@@ -25,10 +25,14 @@
 <?php
     while($d = mysqli_fetch_object($result)){
 ?>
-        <tr>
+        <tr >
             <td><?=$d->processo?></td>
             <td><?=$d->requerente?></td>
-            <td>XXX</td>
+            <td>
+                <button class="btn btn-secondary">
+                    <i class="fa fa-coag"></i>
+                </button>
+            </td>
         </tr>
 <?php
     }
