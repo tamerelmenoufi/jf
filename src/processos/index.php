@@ -12,7 +12,7 @@
                 <li><hr class="dropdown-divider"></li>
                 <li><a class="dropdown-item" href="#">Separated link</a></li> -->
             </ul>
-            <input type="text" class="form-control" id="busca_processo" opc="requerente">
+            <input type="text" class="form-control" id="busca_processo">
             <button class="btn btn-secondary buscar_resultado" >
                 Buscar
             </button>
@@ -27,11 +27,10 @@
         $(".select_busca").click(function(){
             opc = $(this).text();
             $(".select_ativo_busca").text(opc)
-            $("#busca_processo").attr("opc",opc)
         });
 
         $(".buscar_resultado").click(function(){
-            opc = $(this).attr("opc");
+            opc = $(".select_ativo_busca").text()
             $.alert(opc)
         });
     })
