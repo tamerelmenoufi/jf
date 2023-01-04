@@ -1,3 +1,6 @@
+<?php
+    include("{$_SERVER['DOCUMENT_ROOT']}/jf/lib/includes.php");
+?>
 <div class="p-3">
     <div class="row">
         <div class="col">
@@ -35,9 +38,22 @@
         });
 
         $(".buscar_resultado").click(function(){
-            opc = $(".select_ativo_busca").text()
+            campo = $(".select_ativo_busca").text()
+            busca = $("#busca_processo").val();
             // $.alert(opc)
-            $(".pesquisa_resultado").html(opc)
+            $.ajax({
+                url:`src/home/dados/${url}`,
+                type:"POST",
+                data:{
+                    campo,
+                    busca
+                },
+                success:function(dados){
+                    $(".pesquisa_resultado").html(dados)
+                }
+            });
+
+
         });
     })
 </script>
