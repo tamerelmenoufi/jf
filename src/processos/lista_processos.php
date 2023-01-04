@@ -7,7 +7,7 @@
     $n = mysqli_num_rows($result);
     if(!$n){
 ?>
-<div class="d-flex align-content-center" style="color:#a1a1a1; text-align:center" >
+<div style="color:#a1a1a1; text-align:center" >
     <h1>Nenhum resultado para<br><?="{$_POST['busca']}"?></h1>
 </div>
 <?php
