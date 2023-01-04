@@ -16,7 +16,7 @@
         $.ajax({
             url:'src/home/home.php',
             success:function(dados){
-                $("#EstruturaDados").html(dados);
+                $(".PaginaHome").html(dados);
             }
         });
 
@@ -26,7 +26,7 @@
             $.ajax({
                 url,
                 success:function(dados){
-                    $("#EstruturaDados").html(dados);
+                    $(".PaginaHome").html(dados);
                 }
             });
         });
