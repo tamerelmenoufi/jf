@@ -4,17 +4,35 @@
 
 
         <div class="input-group mb-3">
-            <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</button>
+            <button class="btn btn-outline-secondary dropdown-toggle select_ativo_busca" type="button" data-bs-toggle="dropdown" aria-expanded="false">Requerente</button>
             <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                <li><a class="dropdown-item select_busca" href="#" >Processo</a></li>
+                <li><a class="dropdown-item select_busca" href="#">Requerente</a></li>
+                <!-- <li><a class="dropdown-item" href="#">Something else here</a></li>
                 <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#">Separated link</a></li>
+                <li><a class="dropdown-item" href="#">Separated link</a></li> -->
             </ul>
-            <input type="text" class="form-control" aria-label="Text input with dropdown button">
+            <input type="text" class="form-control" id="busca_processo" opc="requerente">
+            <button class="btn btn-secondary buscar_resultado" >
+                Buscar
+            </button>
         </div>
 
         </div>
     </div>
 </div>
+
+<script>
+    $(function(){
+        $(".select_busca").click(function(){
+            opc = $(this).text();
+            $(".select_ativo_busca").text(opc)
+            $("#busca_processo").attr("opc",opc)
+        });
+
+        $(".buscar_resultado").click(function(){
+            opc = $(this).attr("opc");
+            $.alert(opc)
+        });
+    })
+</script>
