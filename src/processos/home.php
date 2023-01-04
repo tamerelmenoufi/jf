@@ -25,3 +25,16 @@
 <div class="tab-content" id="myTabContent">
   <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">...</div>
 </div>
+
+<script>
+    $(function(){
+
+        $.ajax({
+            url:"src/processos/indice_processo.php",
+            success:function(dados){
+                $("#home-tab-pane").html(dados);
+            }
+        });
+
+    })
+</script>
