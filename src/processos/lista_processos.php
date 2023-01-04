@@ -30,7 +30,7 @@
             <td><?=$d->requerente?></td>
             <td>
                 <button class="btn btn-secondary">
-                    <i class="fa fa-coag"></i>
+                    <i class="fa fa-cog"></i>
                 </button>
             </td>
         </tr>
