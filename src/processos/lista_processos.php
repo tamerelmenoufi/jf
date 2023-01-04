@@ -15,9 +15,11 @@
 ?>
 <table class="table table-hover">
     <thead>
-        <tr><th>Processo</th></tr>
-        <tr><th>Requerente</th></tr>
-        <tr><th>Ação</th></tr>
+        <tr>
+            <th>Processo</th>
+            <th>Requerente</th>
+            <th>Ação</th>
+        </tr>
     </thead>
     <tbody>
 <?php
