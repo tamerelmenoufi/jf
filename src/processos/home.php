@@ -7,6 +7,7 @@
         border-left:solid 1px #eee;
         border-right:solid 1px #eee;
         border-bottom:solid 1px #eee;
+        padding:20px;
     }
 </style>
 
