@@ -60,7 +60,7 @@
                     cod,
                 },
                 success:function(dados){
-                    $("#offcanvasDireita").html(dados);
+                    $(".LateralDireita").html(dados);
                 }
             });
         });
