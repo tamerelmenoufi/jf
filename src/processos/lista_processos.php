@@ -29,7 +29,13 @@
             <td><?=$d->processo?></td>
             <td><?=$d->requerente?></td>
             <td>
-                <button class="btn btn-secondary">
+                <button
+                    class="btn btn-secondary"
+                    data-bs-toggle="offcanvas"
+                    href="#offcanvasDireita"
+                    role="button"
+                    aria-controls="offcanvasDireita"
+                >
                     <i class="fa fa-cog"></i>
                 </button>
             </td>
