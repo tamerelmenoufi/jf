@@ -4,9 +4,9 @@
 
 <style>
     #myTabContent{
-        border-left:solid 1px #eee;
-        border-right:solid 1px #eee;
-        border-bottom:solid 1px #eee;
+        border-left:solid 1px #dee2e6;
+        border-right:solid 1px #dee2e6;
+        border-bottom:solid 1px #dee2e6;
         padding:20px;
     }
 </style>
