@@ -11,7 +11,7 @@
     <h1 style="color:#a1a1a1" >Nenhum resultado para<br><?="{$_POST['busca']}"?></h1>
 </div>
 <?php
-    }
+    }else{
 
     while($d = mysqli_fetch_object($result)){
 ?>
@@ -19,6 +19,7 @@
 <p><?=$d->requerente?></p>
 
 <?php
+    }
     }
 ?>
 
