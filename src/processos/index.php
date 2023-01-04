@@ -42,7 +42,7 @@
             busca = $("#busca_processo").val();
             // $.alert(opc)
             $.ajax({
-                url:`src/home/dados/${url}`,
+                url:`src/processos/lista_processos.php`,
                 type:"POST",
                 data:{
                     campo,
