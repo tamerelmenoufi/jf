@@ -41,6 +41,15 @@
             campo = $(".select_ativo_busca").text()
             busca = $("#busca_processo").val();
             // $.alert(opc)
+            if(campo && busca && busca.length <= 3){
+                if(busca.length <= 3){
+                    $.alert('A informação para a busca deve ser superior a três dígitos!');
+                    return false;
+                }
+                $.alert('Digite as informações para a busca!');
+                return false;
+            }
+
             $.ajax({
                 url:`src/processos/lista_processos.php`,
                 type:"POST",
