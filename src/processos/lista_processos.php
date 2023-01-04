@@ -35,6 +35,7 @@
                     href="#offcanvasDireita"
                     role="button"
                     aria-controls="offcanvasDireita"
+                    opc_processo="<?=$d->codigo?>"
                 >
                     <i class="fa fa-cog"></i>
                 </button>
@@ -50,6 +51,18 @@
 ?>
 <script>
     $(function(){
-
+        $("button[opc_processo]").click(function(){
+            cod = $(this).attr("opc_processo");
+            $.ajax({
+                url:"src/processos/home.php",
+                type:"POST",
+                data:{
+                    cod,
+                },
+                success:function(dados){
+                    $("#offcanvasDireita").html(dados);
+                }
+            });
+        });
     })
 </script>
