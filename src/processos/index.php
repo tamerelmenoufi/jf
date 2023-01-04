@@ -18,6 +18,11 @@
             </button>
         </div>
 
+
+        <div class="card mv-3 p-3 pesquisa_resultado">
+            Aqui o resultado da pesquisa
+        </div>
+
         </div>
     </div>
 </div>
@@ -31,7 +36,8 @@
 
         $(".buscar_resultado").click(function(){
             opc = $(".select_ativo_busca").text()
-            $.alert(opc)
+            // $.alert(opc)
+            $(".pesquisa_resultado").html(opc)
         });
     })
 </script>
