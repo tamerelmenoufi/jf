@@ -12,17 +12,30 @@
 </div>
 <?php
     }else{
-
+?>
+<table class="table table-hover">
+    <thead>
+        <tr><th>Processo</th></tr>
+        <tr><th>Requerente</th></tr>
+        <tr><th>Ação</th></tr>
+    </thead>
+    <tbody>
+<?php
     while($d = mysqli_fetch_object($result)){
 ?>
-
-<p><?=$d->requerente?></p>
-
+        <tr>
+            <td><?=$d->processo?></td>
+            <td><?=$d->requerente?></td>
+            <td>XXX</td>
+        </tr>
 <?php
     }
+?>
+    </tbody>
+</table>
+<?php
     }
 ?>
-
 <script>
     $(function(){
 
