@@ -23,7 +23,7 @@
   }
   .acao_tela_min{
     display:none;
-    font-size:20px;
+    font-size:25px;
     cursor:pointer;
     margin:10px;
     color:#000;
