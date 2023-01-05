@@ -6,7 +6,7 @@
       $arq = base64_decode(trim($arq));
       $ext = substr($_POST['name'], strrpos($_POST['name'],'.'), strlen($_POST['name']));
       $nom = md5($_POST['cod'])."{$ext}";
-      if(file_put_contents("../../volume/indice_processo/{$nom}")){
+      if(file_put_contents("../../volume/indice_processo/{$nom}", $arq)){
         mysqli_query($con, "update processos set valida_indice_processo = '{$nom}' where codigo = '{$_POST['cod']}'");
       }
       exit();
