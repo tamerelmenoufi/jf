@@ -16,6 +16,10 @@
     <!-- <div class="form-floating"> -->
 
       <div showImage class="form-floating" style="display:<?=(($d->imagem)?'block':'none')?>">
+        <div class="d-flex justify-content-between">
+          <span>Documento Inserido</span>
+          <i class="fa-solid fa-maximize"></i>
+        </div>
         <object data="" type="" class="mt-3 mb-3 h-100 w-100" ></object>
       </div>
 
