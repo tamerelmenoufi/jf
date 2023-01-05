@@ -64,13 +64,10 @@
       <input type="hidden" id="imagem_nome" name="imagem_nome" value="" />
       <input type="hidden" id="imagem" name="imagem" value="<?=$d->imagem?>" />
       <!-- <label for="url">Banner</label> -->
-      <div class="form-text mb-3">Selecione a imagem para o Banner</div>
+      <div class="form-text mb-3">Selecione a IMAGEM ou o PDF do recorte do Índice do processo.</div>
     <!-- </div> -->
   </li>
 
-  <li class="list-group-item d-flex justify-content-between" style="height:500px;">
-    <object data="<?=$urlData.substr($d->url,1,strlen($d->url))?>" type="" class="h-100 w-100" ></object>
-  </li>
 </ul>
 
 
