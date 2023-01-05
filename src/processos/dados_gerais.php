@@ -7,8 +7,10 @@
 ?>
 <ul class="list-group">
   <li class="list-group-item d-flex justify-content-between">
-    <span>Número do Processo</span>
-    <b><?=$d->processo?></b>
+    <div>
+        <span style="color:#a1a1a1; font-site:10px;">Número do Processo</span><br>
+        <b><?=$d->processo?></b>
+    </div>
     <a href="<?=$urlData.substr($d->url,1,strlen($d->url))?>" target="_blank"><i class="fa-regular fa-file-pdf"></i></a>
   </li>
   <li class="list-group-item d-flex justify-content-between">
