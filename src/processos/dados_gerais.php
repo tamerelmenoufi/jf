@@ -11,10 +11,12 @@
         <span style="color:#a1a1a1; font-size:10px;">Número do Processo</span><br>
         <b><?=$d->processo?></b>
     </div>
-    <a href="<?=$urlData.substr($d->url,1,strlen($d->url))?>" target="_blank"><i class="fa-regular fa-file-pdf"></i></a>
+    <a href="<?=$urlData.substr($d->url,1,strlen($d->url))?>" target="_blank">Abrir <i class="fa-regular fa-file-pdf"></i></a>
   </li>
   <li class="list-group-item d-flex justify-content-between">
-    <span>Nome do Requerente</span>
-    <b><?=$d->requerente?></b>
+    <div>
+        <span style="color:#a1a1a1; font-size:10px;">Nome do Requerente</span><br>
+        <b><?=$d->requerente?></b>
+    </div>
   </li>
 </ul>
