@@ -19,10 +19,12 @@
     font-size:20px;
     cursor:pointer;
     margin:10px;
+    color:#ccc;
   }
   .titulo_tela_cheia{
     font-size:20px;
     margin:10px;
+    color:#333;
   }
 </style>
 
