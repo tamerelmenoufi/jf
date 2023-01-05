@@ -19,19 +19,19 @@
     font-size:20px;
     cursor:pointer;
     margin:10px;
-    color:#ccc;
+    color:#000;
   }
   .titulo_tela_cheia{
     font-size:20px;
     padding:10px;
-    color:#333;
+    color:#000;
   }
 </style>
 
 
 <ul class="list-group">
   <li class="list-group-item d-flex justify-content-between">
-    <span class="titulo_tela_cheia">Registro do índice do processo</span>
+    <div class="titulo_tela_cheia">Registro do índice do processo</div>
     <a href="http://moh1.com.br/jf/SIGLO_AM/CONVENIO 2000\08-Titulos Plotados\AM\01-Livros\03-Indice Remissivo de Processo/ÍNDICE REMISSIVO DE PROCESSOS.pdf" target="_blank" style="text-decoration:none;">PDF Origem <i class="fa-regular fa-file-pdf"></i></a>
   </li>
 
