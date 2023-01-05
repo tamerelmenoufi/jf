@@ -70,11 +70,10 @@
       </div>
 
       <input type="file" class="form-control" placeholder="Banner" accept="image/jpeg,image/gif,image/png,application/pdf,image/x-eps">
-      <input type="hidden" id="base64" name="base64" value="" />
+      <!-- <input type="hidden" id="base64" name="base64" value="" />
       <input type="hidden" id="imagem_tipo" name="imagem_tipo" value="" />
       <input type="hidden" id="imagem_nome" name="imagem_nome" value="" />
-      <input type="text" id="imagem_size" name="imagem_size" value="" />
-      <input type="hidden" id="imagem" name="imagem" value="<?=$d->imagem?>" />
+      <input type="hidden" id="imagem" name="imagem" value="<?=$d->imagem?>" /> -->
       <!-- <label for="url">Banner</label> -->
       <div class="form-text mb-3">Selecione a IMAGEM ou o PDF do recorte do Índice do processo.</div>
     <!-- </div> -->
@@ -153,8 +152,6 @@ $('input[type="file"]').change(function () {
 
                 $("div[showImage] object").attr("data",Base64);
                 $("div[showImage]").css("display",'block');
-
-
 
                 };
                 fileReader.readAsDataURL(file);
