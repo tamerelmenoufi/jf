@@ -58,7 +58,7 @@
         <object data="" type="" class="mt-3 mb-3 h-100 w-100" ></object>
       </div>
 
-      <input type="file" class="form-control" placeholder="Banner">
+      <input type="file" class="form-control" placeholder="Banner" accept="image/jpeg,image/gif,image/png,application/pdf,image/x-eps">
       <input type="hidden" id="base64" name="base64" value="" />
       <input type="hidden" id="imagem_tipo" name="imagem_tipo" value="" />
       <input type="hidden" id="imagem_nome" name="imagem_nome" value="" />
