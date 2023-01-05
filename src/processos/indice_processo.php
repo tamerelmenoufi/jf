@@ -140,6 +140,7 @@ $('input[type="file"]').change(function () {
                   },
                   error:function(){
                     Carregando('none');
+                    $.alert('erro')
                   }
                 });
 
