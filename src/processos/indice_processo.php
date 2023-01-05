@@ -5,11 +5,25 @@
     $result = mysqli_query($con, $query);
     $d = mysqli_fetch_object($result);
 ?>
+<style>
+  .tela_cheia{
+    position:fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    z-index:999;
+  }
+</style>
+
+
 <ul class="list-group">
   <li class="list-group-item d-flex justify-content-between">
     <span>Registro do índice do processo</span>
     <a href="http://moh1.com.br/jf/SIGLO_AM/CONVENIO 2000\08-Titulos Plotados\AM\01-Livros\03-Indice Remissivo de Processo/ÍNDICE REMISSIVO DE PROCESSOS.pdf" target="_blank" style="text-decoration:none;">PDF Origem <i class="fa-regular fa-file-pdf"></i></a>
   </li>
+
+
 
 
   <li class="list-group-item">
@@ -18,7 +32,7 @@
       <div showImage class="form-floating" style="display:<?=(($d->imagem)?'block':'none')?>">
         <div class="d-flex justify-content-between">
           <span>Documento Inserido</span>
-          <i class="fa-solid fa-maximize"></i>
+          <i class="fa-solid fa-maximize acao_tela_cheia"></i>
         </div>
         <object data="" type="" class="mt-3 mb-3 h-100 w-100" ></object>
       </div>
@@ -41,7 +55,13 @@
 
 <script>
 
+  $(function(){
 
+    $(".acao_tela_cheia").click(function(){
+      $("div[showImage]").addClass("tela_cheia");
+    });
+
+  })
 
 
 if (window.File && window.FileList && window.FileReader) {
