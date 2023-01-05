@@ -66,7 +66,7 @@
           <i class="fa-solid fa-maximize acao_tela_cheia"></i>
           <i class="fa-solid fa-close acao_tela_min"></i>
         </div>
-        <object data="" type="" class="mt-3 mb-3 h-100 w-100" ></object>
+        <object data="../../volume/indice_processo/<?=$d->valida_indice_processo?>" type="" class="mt-3 mb-3 h-100 w-100" ></object>
       </div>
 
       <input type="file" class="form-control" placeholder="Banner" accept="image/jpeg,image/gif,image/png,application/pdf,image/x-eps">
