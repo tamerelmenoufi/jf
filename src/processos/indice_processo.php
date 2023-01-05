@@ -60,7 +60,7 @@ $('input[type="file"]').change(function () {
                 $("#imagem_tipo").val(type);
                 $("#imagem_nome").val(name);
 
-                $("div[showImage] data").attr("src",Base64);
+                $("div[showImage] object").attr("data",Base64);
                 $("div[showImage]").css("display",'block');
 
 
