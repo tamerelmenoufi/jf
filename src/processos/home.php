@@ -31,6 +31,10 @@
 
         $.ajax({
             url:"src/processos/indice_processo.php",
+            type:"POST",
+            data:{
+                cod:'<?=$_POST['cod']?>',
+            },
             success:function(dados){
                 $("#home-tab-pane").html(dados);
             }
