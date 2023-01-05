@@ -26,6 +26,9 @@
     margin:10px;
     color:#000;
   }
+  .acao_tela_min{
+    display:none;
+  }
 </style>
 
 
@@ -45,6 +48,7 @@
         <div class="d-flex justify-content-between">
           <span class="titulo_tela_cheia">Documento Inserido</span>
           <i class="fa-solid fa-maximize acao_tela_cheia"></i>
+          <i class="fa-solid fa-close acao_tela_min"></i>
         </div>
         <object data="" type="" class="mt-3 mb-3 h-100 w-100" ></object>
       </div>
@@ -71,6 +75,14 @@
 
     $(".acao_tela_cheia").click(function(){
       $("div[showImage]").addClass("tela_cheia");
+      $(this).css("display","none");
+      $(".acao_tela_min").css("display","inline");
+    });
+
+    $(".acao_tela_min").click(function(){
+      $("div[showImage]").removeClass("tela_cheia");
+      $(this).css("display","none");
+      $(".acao_tela_cheia").css("display","inline");
     });
 
   })
