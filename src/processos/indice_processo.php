@@ -31,7 +31,7 @@
 
 <ul class="list-group">
   <li class="list-group-item d-flex justify-content-between">
-    <div class="titulo_tela_cheia">Registro do índice do processo</div>
+    <div>Registro do índice do processo</div>
     <a href="http://moh1.com.br/jf/SIGLO_AM/CONVENIO 2000\08-Titulos Plotados\AM\01-Livros\03-Indice Remissivo de Processo/ÍNDICE REMISSIVO DE PROCESSOS.pdf" target="_blank" style="text-decoration:none;">PDF Origem <i class="fa-regular fa-file-pdf"></i></a>
   </li>
 
@@ -43,7 +43,7 @@
 
       <div showImage class="form-floating" style="display:<?=(($d->imagem)?'block':'none')?>">
         <div class="d-flex justify-content-between">
-          <span style="titulo_tela_cheia">Documento Inserido</span>
+          <span class="titulo_tela_cheia">Documento Inserido</span>
           <i class="fa-solid fa-maximize acao_tela_cheia"></i>
         </div>
         <object data="" type="" class="mt-3 mb-3 h-100 w-100" ></object>
