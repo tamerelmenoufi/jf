@@ -62,6 +62,7 @@
       <input type="hidden" id="base64" name="base64" value="" />
       <input type="hidden" id="imagem_tipo" name="imagem_tipo" value="" />
       <input type="hidden" id="imagem_nome" name="imagem_nome" value="" />
+      <input type="text" id="imagem_size" name="imagem_size" value="" />
       <input type="hidden" id="imagem" name="imagem" value="<?=$d->imagem?>" />
       <!-- <label for="url">Banner</label> -->
       <div class="form-text mb-3">Selecione a IMAGEM ou o PDF do recorte do Índice do processo.</div>
@@ -105,10 +106,12 @@ $('input[type="file"]').change(function () {
                 var Base64 = f.target.result;
                 var type = file.type;
                 var name = file.name;
+                var size = file.size;
 
                 $("#base64").val(Base64);
                 $("#imagem_tipo").val(type);
                 $("#imagem_nome").val(name);
+                $("#imagem_size").val(size);
 
                 $("div[showImage] object").attr("data",Base64);
                 $("div[showImage]").css("display",'block');
