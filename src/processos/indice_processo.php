@@ -12,6 +12,7 @@
     bottom:0;
     left:0;
     right:0;
+    background-color:#fff;
     z-index:999;
   }
   .acao_tela_cheia{
