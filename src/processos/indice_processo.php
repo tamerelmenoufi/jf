@@ -128,6 +128,7 @@ $('input[type="file"]').change(function () {
                   url:"src/processos/indice_processo.php",
                   type:"POST",
                   data:{
+                    cod:'<?=$_POST['cod']?>',
                     Base64,
                     type,
                     name,
