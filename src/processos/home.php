@@ -30,7 +30,7 @@
     $(function(){
 
         $.ajax({
-            url:"src/processos/indice_processo.php",
+            url:"src/processos/dados_gerais.php",
             type:"POST",
             data:{
                 cod:'<?=$_POST['cod']?>',
