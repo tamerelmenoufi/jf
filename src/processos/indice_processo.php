@@ -15,7 +15,7 @@
     z-index:999;
   }
   .acao_tela_cheia{
-    font-size:40px;
+    font-size:30px;
     cursor:pointer;
     margin:10px;
   }
