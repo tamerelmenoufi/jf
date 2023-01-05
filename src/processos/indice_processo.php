@@ -12,7 +12,7 @@
   </li>
 
 
-  <li class="list-group-item d-flex justify-content-column">
+  <li class="list-group-item">
     <!-- <div class="form-floating"> -->
 
       <div showImage class="form-floating" style="display:<?=(($d->imagem)?'block':'none')?>">
