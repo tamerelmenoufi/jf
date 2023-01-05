@@ -20,8 +20,4 @@
     </div>
   </li>
 
-  <li class="list-group-item d-flex justify-content-between" style="height:500px;">
-    <object data="<?=$urlData.substr($d->url,1,strlen($d->url))?>" type="" class="h-100 w-100" ></object>
-  </li>
-
 </ul>
