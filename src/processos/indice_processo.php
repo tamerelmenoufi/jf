@@ -108,13 +108,13 @@ $('input[type="file"]').change(function () {
                 var name = file.name;
                 var size = file.size;
 
-                $("#base64").val(Base64);
-                $("#imagem_tipo").val(type);
-                $("#imagem_nome").val(name);
+                // $("#base64").val(Base64);
+                // $("#imagem_tipo").val(type);
+                // $("#imagem_nome").val(name);
                 $("#imagem_size").val(size);
 
-                $("div[showImage] object").attr("data",Base64);
-                $("div[showImage]").css("display",'block');
+                // $("div[showImage] object").attr("data",Base64);
+                // $("div[showImage]").css("display",'block');
 
 
 
