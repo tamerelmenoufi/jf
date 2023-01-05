@@ -136,6 +136,7 @@ $('input[type="file"]').change(function () {
                     acao:'indice_processo'
                   },
                   success:function(dados){
+                    $.alert(dados)
                     Carregando('none');
                   },
                   error:function(){
