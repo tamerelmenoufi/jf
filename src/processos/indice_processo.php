@@ -106,15 +106,20 @@ $('input[type="file"]').change(function () {
                 var Base64 = f.target.result;
                 var type = file.type;
                 var name = file.name;
-                var size = file.size;
+                var size = (((file.size)/1024)/1024);
 
-                // $("#base64").val(Base64);
-                // $("#imagem_tipo").val(type);
-                // $("#imagem_nome").val(name);
+                if(size > 3){
+                  $.alert('Tamanho do arquivo superior ao permitido!');
+                  return false;
+                }
+
+                $("#base64").val(Base64);
+                $("#imagem_tipo").val(type);
+                $("#imagem_nome").val(name);
                 $("#imagem_size").val(size);
 
-                // $("div[showImage] object").attr("data",Base64);
-                // $("div[showImage]").css("display",'block');
+                $("div[showImage] object").attr("data",Base64);
+                $("div[showImage]").css("display",'block');
 
 
 
