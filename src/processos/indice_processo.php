@@ -23,7 +23,7 @@
   }
   .titulo_tela_cheia{
     font-size:20px;
-    margin:20px;
+    margin:10px;
     color:#000;
   }
 </style>
