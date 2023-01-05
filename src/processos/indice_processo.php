@@ -1,6 +1,17 @@
 <?php
     include("{$_SERVER['DOCUMENT_ROOT']}/jf/lib/includes.php");
 
+    if($_POST['acao'] == 'indice_processo'){
+      $arq = str_replace("data:{$_POST['type']};base64,",false,$_POST['Base64']);
+      $arq = base64_decode(trim($arq));
+      $ext = substr($_POST['name'], strrpos($_POST['name'],'.'), strlen($_POST['name']));
+      $nom = md5($_POST['cod'])."{$ext}";
+      if(file_put_contents("../../volume/indice_processo/{$nom}")){
+        mysqli_query($con, "update processos set valida_indice_processo = '{$nom}' where codigo = '{$_POST['cod']}'");
+      }
+      exit();
+    }
+
     $query = "select * from processos where codigo = '{$_POST['cod']}'";
     $result = mysqli_query($con, $query);
     $d = mysqli_fetch_object($result);
@@ -49,7 +60,7 @@
   <li class="list-group-item">
     <!-- <div class="form-floating"> -->
 
-      <div showImage class="form-floating" style="display:<?=(($d->imagem)?'block':'none')?>">
+      <div showImage class="form-floating" style="display:<?=((is_file("../../volume/indice_processo/{$d->valida_indice_processo}"))?'block':'none')?>">
         <div class="d-flex justify-content-between">
           <span class="titulo_tela_cheia">Documento Inserido</span>
           <i class="fa-solid fa-maximize acao_tela_cheia"></i>
@@ -112,11 +123,30 @@ $('input[type="file"]').change(function () {
                   $.alert('Tamanho do arquivo superior ao permitido!');
                   return false;
                 }
+                Carregando();
+                $.ajax({
+                  url:"src/processos/indice_processo.php",
+                  type:"POST",
+                  data:{
+                    Base64,
+                    type,
+                    name,
+                    size,
+                    acao:'indice_processo'
+                  },
+                  success:function(dados){
+                    Carregando('none');
+                  },
+                  error:function(){
+                    Carregando('none');
+                  }
+                });
 
-                $("#base64").val(Base64);
-                $("#imagem_tipo").val(type);
-                $("#imagem_nome").val(name);
-                $("#imagem_size").val(size);
+
+                // $("#base64").val(Base64);
+                // $("#imagem_tipo").val(type);
+                // $("#imagem_nome").val(name);
+                // $("#imagem_size").val(size);
 
                 $("div[showImage] object").attr("data",Base64);
                 $("div[showImage]").css("display",'block');
