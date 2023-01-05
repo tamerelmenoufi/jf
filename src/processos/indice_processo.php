@@ -21,14 +21,19 @@
     margin:10px;
     color:#000;
   }
+  .acao_tela_min{
+    display:none;
+    font-size:20px;
+    cursor:pointer;
+    margin:10px;
+    color:#000;
+  }
   .titulo_tela_cheia{
     font-size:20px;
     margin:10px;
     color:#000;
   }
-  .acao_tela_min{
-    display:none;
-  }
+
 </style>
 
 
