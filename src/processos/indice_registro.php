@@ -139,7 +139,7 @@ $('input[type="file"]').change(function () {
                     acao:'indice_registro'
                   },
                   success:function(dados){
-                    $.alert(dados)
+                    // $.alert(dados)
                     Carregando('none');
                   },
                   error:function(){
