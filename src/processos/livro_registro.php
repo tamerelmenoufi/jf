@@ -123,7 +123,7 @@
       ['lv', 'LV', 4, $v->area,'text',false],
       ['folhas', 'Folhas', 4, $v->area,'text',false],
       ['pag_pdf_orig', 'Página no PDF de Origem', 4, $v->pag_pdf_orig,'text',false],
-      ['detalhes', 'Informações/Detalhes', 4, $v->detalhes,'textarea',false],
+      ['detalhes', 'Informações/Detalhes', 12, $v->detalhes,'textarea',false],
     ];
 
   ?>
