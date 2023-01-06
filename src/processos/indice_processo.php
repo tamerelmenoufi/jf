@@ -123,7 +123,7 @@
         <div class="form-floating mb-3">
           <input
                 type="text"
-                class="form-control is-valid acao_dados"
+                class="form-control is-<?=(($row[3])?'valid':'invalid')?> acao_dados"
                 id="<?=$row[0]?>"
                 value="<?="{$row[3]}"?>"
                 atual="<?="{$row[3]}"?>"
@@ -178,6 +178,15 @@
         success:function(dados){
           // $.alert(dados)
           obj.attr("atual", valor);
+
+          if(valor.trim()){
+            obj.removeClass("is-invalid")
+            obj.addClass("is-valid")
+          }else{
+            obj.addClass("is-invalid")
+            obj.removeClass("is-valid")
+          }
+
           Carregando('none');
         },
         error:function(){
