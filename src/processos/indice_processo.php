@@ -24,7 +24,7 @@
     $d = mysqli_fetch_object($result);
 
     $v = json_decode($d->valida_indice_processo);
-    var_dump($v);
+    // var_dump($v);
 ?>
 <style>
   .tela_cheia{
@@ -93,6 +93,7 @@
   <?php
 
     $dados = [
+      // ID, TITLE, COL, VALUE
       ['ch_arq', 'CH ARQ', 4, $v->ch_arq],
       ['fol', 'FOL', 4, $v->fol],
       ['ic_pro', 'IC PRO', 4, $v->ic_pro],
@@ -112,7 +113,7 @@
   ?>
 
   <li class="list-group-item">
-    <h5>Registros Complementares <?=$v->ch_arq?></h5>
+    <h5>Registros Complementares</h5>
 
     <div class="row">
       <?php
