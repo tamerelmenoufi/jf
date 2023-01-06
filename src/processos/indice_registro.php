@@ -202,7 +202,7 @@
         },
         error:function(){
           Carregando('none');
-          $.alert('erro')
+          $.alert('Ocorreu um erro de conexão!')
         }
       });
 
