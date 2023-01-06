@@ -120,7 +120,7 @@
       ?>
       <div class="col-md-<?=$row[2]?>">
         <div class="form-floating mb-3">
-          <input type="text" class="form-control is-valid acao_dados" id="<?=$row[0]?>" value="<?=$v->$row[0]?>" >
+          <input type="text" class="form-control is-valid acao_dados" id="<?=$row[0]?>" value="<?="{$v->$row[0]}"?>" >
           <label for="<?=$row[0]?>" class="form-label"><?=$row[1]?></label>
         </div>
       </div>
