@@ -149,6 +149,8 @@
 
   $(function(){
 
+    $.mask();
+
     $(".acao_tela_cheia").click(function(){
       $("div[showImage]").addClass("tela_cheia");
       $(this).css("display","none");
