@@ -128,7 +128,7 @@
                 id="<?=$row[0]?>"
                 value="<?="{$row[3]}"?>"
                 atual="<?="{$row[3]}"?>"
-                data-mask="<?="{$row[5]}"?>"
+                mask="<?="{$row[5]}"?>"
           >
           <label for="<?=$row[0]?>" class="form-label"><?=$row[1]?></label>
         </div>
@@ -149,7 +149,12 @@
 
   $(function(){
 
-    $(document).mask();
+    $(".acao_dados").each(function(){
+        mask = $(this).attr("mask");
+        if(mask){
+            $(this).mask(mask);
+        }
+    })
 
     $(".acao_tela_cheia").click(function(){
       $("div[showImage]").addClass("tela_cheia");
