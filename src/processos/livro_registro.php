@@ -120,6 +120,8 @@
     //   ['est', 'EST', 4, $v->est,'text',false],
     //   ['part', 'PART', 4, $v->part,'text',false],
     //   ['cai', 'CAI', 4, $v->cai,'text',false],
+      ['lv', 'LV', 4, $v->area,'text',false],
+      ['folhas', 'Folhas', 4, $v->area,'text',false],
       ['pag_pdf_orig', 'Página no PDF de Origem', 4, $v->pag_pdf_orig,'text',false],
     ];
 
