@@ -4,6 +4,12 @@
     if($_POST['acao'] == 'valor_campo'){
         $q = "update processos set valida_indice_registro = JSON_SET(valida_indice_registro, '$.{$_POST['campo']}','{$_POST['valor']}') where codigo = '{$_POST['cod']}'";
         mysqli_query($con, $q);
+
+        RegLog([
+            'dados' => $_POST,//POST, GET e ETC
+            'query' => $q //Comando SQL da Operação
+        ]);
+
         exit();
     }
 
@@ -15,6 +21,12 @@
       if(file_put_contents("../../volume/indice_registro/{$nom}", $arq)){
         $q = "update processos set valida_indice_registro = JSON_SET(valida_indice_registro, '$.arquivo','{$nom}') where codigo = '{$_POST['cod']}'";
         mysqli_query($con, $q);
+
+        RegLog([
+            'dados' => $_POST,//POST, GET e ETC
+            'query' => $q //Comando SQL da Operação
+        ]);
+
       }
       exit();
     }
