@@ -108,7 +108,7 @@
       ['rol', 'ROL', 4, $v->area,'text',false],
       ['blipts', 'BLIPTS', 4, $v->area,'text',false],
       ['sit', 'SIT', 4, $v->sit,'text',false],
-
+      ['pag_pdf_orig', 'Página no PDF de Origem', 4, $v->pag_pdf_orig,'text',false],
     ];
 
   ?>
