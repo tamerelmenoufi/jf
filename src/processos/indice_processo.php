@@ -7,7 +7,7 @@
       $ext = substr($_POST['name'], strrpos($_POST['name'],'.'), strlen($_POST['name']));
       $nom = md5($_POST['cod'])."{$ext}";
       if(file_put_contents("../../volume/indice_processo/{$nom}", $arq)){
-        echo $q = "update processos set valida_indice_processo = JSON_SET(valida_indice_processo, '$.arquivo','{$nom}') where codigo = '{$_POST['cod']}'";
+        $q = "update processos set valida_indice_processo = JSON_SET(valida_indice_processo, '$.arquivo','{$nom}') where codigo = '{$_POST['cod']}'";
         mysqli_query($con, $q);
       }
       exit();
@@ -18,7 +18,6 @@
     $d = mysqli_fetch_object($result);
 
     $v = json_decode($d->valida_indice_processo);
-    var_dump($v);
 ?>
 <style>
   .tela_cheia{
@@ -182,7 +181,7 @@ $('input[type="file"]').change(function () {
                     acao:'indice_processo'
                   },
                   success:function(dados){
-                    $.alert(dados)
+                    // $.alert(dados)
                     Carregando('none');
                   },
                   error:function(){

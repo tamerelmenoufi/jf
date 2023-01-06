@@ -7,7 +7,8 @@
       $ext = substr($_POST['name'], strrpos($_POST['name'],'.'), strlen($_POST['name']));
       $nom = md5($_POST['cod'])."{$ext}";
       if(file_put_contents("../../volume/indice_registro/{$nom}", $arq)){
-        mysqli_query($con, "update processos set valida_indice_registro = '{$nom}' where codigo = '{$_POST['cod']}'");
+        $q = "update processos set valida_indice_registro = JSON_SET(valida_indice_registro, '$.arquivo','{$nom}') where codigo = '{$_POST['cod']}'";
+        mysqli_query($con, $q);
       }
       exit();
     }
@@ -15,6 +16,9 @@
     $query = "select * from processos where codigo = '{$_POST['cod']}'";
     $result = mysqli_query($con, $query);
     $d = mysqli_fetch_object($result);
+
+    $v = json_decode($d->valida_indice_registro);
+
 ?>
 <style>
   .tela_cheia{
@@ -60,13 +64,13 @@
   <li class="list-group-item">
     <!-- <div class="form-floating"> -->
 
-      <div showImage class="form-floating" style="display:<?=((is_file("../../volume/indice_registro/{$d->valida_indice_registro}"))?'block':'none')?>">
+      <div showImage class="form-floating" style="display:<?=((is_file("../../volume/indice_registro/{$v->arquivo}"))?'block':'none')?>">
         <div class="d-flex justify-content-between">
           <span class="titulo_tela_cheia">Documento Inserido</span>
           <i class="fa-solid fa-maximize acao_tela_cheia"></i>
           <i class="fa-solid fa-close acao_tela_min"></i>
         </div>
-        <object data="../../volume/indice_registro/<?=$d->valida_indice_registro?>" type="" class="mt-3 mb-3 h-100 w-100" ></object>
+        <object data="../../volume/indice_registro/<?=$v->arquivo?>" type="" class="mt-3 mb-3 h-100 w-100" ></object>
       </div>
 
       <input type="file" class="form-control" placeholder="Banner" accept="image/jpeg,image/gif,image/png,application/pdf,image/x-eps">
