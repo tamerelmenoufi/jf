@@ -101,7 +101,7 @@
       ['ord', 'ORD', 4, $v->ic_pro,'text',false],
       ['proprietario', 'Proprietário', 4, $v->proprietario,'text',false],
       ['mun', 'MUM', 4, $v->mun,'text',false],
-      ['dt_exp', 'DT EXP', 4, $v->data_td,'text',false],
+      ['dt_exp', 'DT EXP', 4, $v->data_td,'text',"99/99/9999"],
       ['area', 'Área', 4, $v->area,'text',false],
       ['lv', 'LV', 4, $v->area,'text',false],
       ['folhas', 'Folhas', 4, $v->area,'text',false],
