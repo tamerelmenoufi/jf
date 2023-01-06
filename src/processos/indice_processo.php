@@ -121,7 +121,13 @@
       ?>
       <div class="col-md-<?=$row[2]?>">
         <div class="form-floating mb-3">
-          <input type="text" class="form-control is-valid acao_dados" id="<?=$row[0]?>" value="<?="{$row[3]}"?>" >
+          <input
+                type="text"
+                class="form-control is-valid acao_dados"
+                id="<?=$row[0]?>"
+                value="<?="{$row[3]}"?>"
+                atual="<?="{$row[3]}"?>"
+          >
           <label for="<?=$row[0]?>" class="form-label"><?=$row[1]?></label>
         </div>
       </div>
@@ -155,7 +161,10 @@
     $(".acao_dados").blur(function(){
       campo = $(this).attr("id");
       valor = $(this).val();
+      atual = $(this).attr("atual");
 
+      if(atual == valor) return false;
+      Carregando();
       $.ajax({
         url:"src/processos/indice_processo.php",
         type:"POST",
