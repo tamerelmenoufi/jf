@@ -93,20 +93,20 @@
   <?php
 
     $dados = [
-      ['ch_arq', 'CH ARQ', 4],
-      ['fol', 'FOL', 4],
-      ['ic_pro', 'IC PRO', 4],
-      ['proprietario', 'Proprietário', 4],
-      ['nome_imovel', 'Nome Imóvel', 4],
-      ['mun', 'MUM', 4],
-      ['com', 'COM', 4],
-      ['loc', 'LOC', 4],
-      ['area', 'Área', 4],
-      ['data_td', 'Data TD', 4],
-      ['sit', 'SIT', 4],
-      ['est', 'EST', 4],
-      ['part', 'PART', 4],
-      ['cai', 'CAI', 4],
+      ['ch_arq', 'CH ARQ', 4, $v->ch_arq],
+      ['fol', 'FOL', 4, $v->fol],
+      ['ic_pro', 'IC PRO', 4, $v->ic_pro],
+      ['proprietario', 'Proprietário', 4, $v->proprietario],
+      ['nome_imovel', 'Nome Imóvel', 4, $v->nome_imovel],
+      ['mun', 'MUM', 4, $v->mun],
+      ['com', 'COM', 4, $v->com],
+      ['loc', 'LOC', 4, $v->loc],
+      ['area', 'Área', 4, $v->area],
+      ['data_td', 'Data TD', 4, $v->data_td],
+      ['sit', 'SIT', 4, $v->sit],
+      ['est', 'EST', 4, $v->est],
+      ['part', 'PART', 4, $v->part],
+      ['cai', 'CAI', 4, $v->cai],
     ];
 
   ?>
@@ -120,7 +120,7 @@
       ?>
       <div class="col-md-<?=$row[2]?>">
         <div class="form-floating mb-3">
-          <input type="text" class="form-control is-valid acao_dados" id="<?=$row[0]?>" value="<?="{$v->$row[0]}"?>" >
+          <input type="text" class="form-control is-valid acao_dados" id="<?=$row[0]?>" value="<?="{$row[3]}"?>" >
           <label for="<?=$row[0]?>" class="form-label"><?=$row[1]?></label>
         </div>
       </div>
