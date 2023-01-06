@@ -134,6 +134,18 @@
       ?>
       <div class="col-md-<?=$row[2]?>">
         <div class="form-floating mb-3">
+        <?php
+          if(strtolower($row[4]) == 'textarea'){
+          ?>
+          <textarea
+                type="<?="{$row[4]}"?>"
+                class="form-control is-<?=(($row[3])?'valid':'invalid')?> acao_dados"
+                id="<?=$row[0]?>"
+                atual="<?="{$row[3]}"?>"
+          ><?="{$row[3]}"?></textarea>
+          <?php
+          }else{
+          ?>
           <input
                 type="<?="{$row[4]}"?>"
                 class="form-control is-<?=(($row[3])?'valid':'invalid')?> acao_dados"
@@ -142,6 +154,9 @@
                 atual="<?="{$row[3]}"?>"
                 mask="<?="{$row[5]}"?>"
           >
+          <?php
+          }
+          ?>
           <label for="<?=$row[0]?>" class="form-label"><?=$row[1]?></label>
         </div>
       </div>
