@@ -1,6 +1,12 @@
 <?php
     include("{$_SERVER['DOCUMENT_ROOT']}/jf/lib/includes.php");
 
+    if($_POST['acao'] == 'valor_campo'){
+        $q = "update processos set valida_indice_registro = JSON_SET(valida_indice_registro, '$.{$_POST['campo']}','{$_POST['valor']}') where codigo = '{$_POST['cod']}'";
+        mysqli_query($con, $q);
+        exit();
+    }
+
     if($_POST['acao'] == 'indice_registro'){
       $arq = str_replace("data:{$_POST['type']};base64,",false,$_POST['Base64']);
       $arq = base64_decode(trim($arq));
@@ -83,6 +89,58 @@
     <!-- </div> -->
   </li>
 
+
+
+  <?php
+
+    $dados = [
+      // ID, TITLE, COL, VALUE
+      ['ch_arq', 'CH ARQ', 4, $v->ch_arq],
+      ['ic_pro', 'IC PRO', 4, $v->ic_pro],
+      ['pag', 'PAG', 4, $v->ic_pro],
+      ['ord', 'ORD', 4, $v->ic_pro],
+      ['proprietario', 'Proprietário', 4, $v->proprietario],
+      ['mun', 'MUM', 4, $v->mun],
+      ['dt_exp', 'DT EXP', 4, $v->data_td],
+      ['area', 'Área', 4, $v->area],
+      ['lv', 'LV', 4, $v->area],
+      ['folhas', 'Folhas', 4, $v->area],
+      ['rol', 'ROL', 4, $v->area],
+      ['blipts', 'BLIPTS', 4, $v->area],
+      ['sit', 'SIT', 4, $v->sit],
+
+    ];
+
+  ?>
+
+  <li class="list-group-item">
+    <h5>Registros Complementares</h5>
+
+    <div class="row">
+      <?php
+      foreach($dados as $ind => $row){
+      ?>
+      <div class="col-md-<?=$row[2]?>">
+        <div class="form-floating mb-3">
+          <input
+                type="text"
+                class="form-control is-valid acao_dados"
+                id="<?=$row[0]?>"
+                value="<?="{$row[3]}"?>"
+                atual="<?="{$row[3]}"?>"
+          >
+          <label for="<?=$row[0]?>" class="form-label"><?=$row[1]?></label>
+        </div>
+      </div>
+
+      <?php
+      }
+      ?>
+    </div>
+
+  </li>
+
+
 </ul>
 
 
@@ -100,6 +158,37 @@
       $("div[showImage]").removeClass("tela_cheia");
       $(this).css("display","none");
       $(".acao_tela_cheia").css("display","inline");
+    });
+
+
+    $(".acao_dados").blur(function(){
+      obj = $(this);
+      campo = obj.attr("id");
+      valor = obj.val();
+      atual = obj.attr("atual");
+
+      if(atual == valor) return false;
+      Carregando();
+      $.ajax({
+        url:"src/processos/indice_registro.php",
+        type:"POST",
+        data:{
+          cod:'<?=$_POST['cod']?>',
+          campo,
+          valor,
+          acao:'valor_campo'
+        },
+        success:function(dados){
+          // $.alert(dados)
+          obj.attr("atual", valor);
+          Carregando('none');
+        },
+        error:function(){
+          Carregando('none');
+          $.alert('erro')
+        }
+      });
+
     });
 
   })
