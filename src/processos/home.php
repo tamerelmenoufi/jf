@@ -51,6 +51,21 @@
         local="src/processos/indice_registro.php"
     >INDECE DE REGISTRO</button>
   </li>
+  <li class="nav-item" role="presentation">
+    <button
+        class="nav-link acao_tab"
+        id="livro_registro_tab"
+        data-bs-toggle="tab"
+        data-bs-target="#home-tab-pane"
+        type="button"
+        role="tab"
+        aria-controls="home-tab-pane"
+        aria-selected="false"
+        local="src/processos/livro_registro.php"
+    >LIVRO DE REGISTRO</button>
+  </li>
+
+
 </ul>
 <div class="tab-content" id="myTabContent">
   <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">...</div>
