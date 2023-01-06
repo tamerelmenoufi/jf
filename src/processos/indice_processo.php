@@ -64,7 +64,7 @@
   <li class="list-group-item">
     <!-- <div class="form-floating"> -->
 
-      <div showImage class="form-floating" style="display:<?=((is_file("../../volume/indice_processo/{$d->valida_indice_processo}"))?'block':'none')?>">
+      <div showImage class="form-floating" style="display:<?=((is_file("../../volume/indice_processo/{$v->arquivo}"))?'block':'none')?>">
         <div class="d-flex justify-content-between">
           <span class="titulo_tela_cheia">Documento Inserido</span>
           <i class="fa-solid fa-maximize acao_tela_cheia"></i>
