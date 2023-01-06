@@ -24,6 +24,7 @@
     $d = mysqli_fetch_object($result);
 
     $v = json_decode($d->valida_indice_processo);
+    var_dump($v);
 ?>
 <style>
   .tela_cheia{
