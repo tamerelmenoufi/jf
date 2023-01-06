@@ -79,6 +79,48 @@
     <!-- </div> -->
   </li>
 
+
+  <?php
+
+    $dados = [
+      ['ch_arq', 'CH ARQ', 4],
+      ['fol', 'FOL', 4],
+      ['ic_pro', 'IC PRO', 4],
+      ['proprietario', 'Proprietário', 4],
+      ['nome_imovel', 'Nome Imóvel', 4],
+      ['mun', 'NUM', 4],
+      ['com', 'COM', 4],
+      ['loc', 'LOC', 4],
+      ['area', 'Área', 4],
+      ['data_td', 'Data TD', 4],
+      ['sit', 'SIT', 4],
+      ['est', 'EST', 4],
+      ['part', 'PART', 4],
+      ['cai', 'CAI', 4],
+    ];
+
+  ?>
+
+  <li class="list-group-item">
+    <h5>Registros Complementares</h5>
+
+    <div class="row">
+      <?php
+      foreach($dados as $ind => $row){
+      ?>
+      <div class="col-md-<?=$row[2]?>">
+        <div class="mb-3">
+          <label for="<?=$row[0]?>" class="form-label"><?=$row[1]?></label>
+          <input type="text" class="form-control" id="<?=$row[0]?>" >
+        </div>
+      </div>
+      <?php
+      }
+      ?>
+    </div>
+
+  </li>
+
 </ul>
 
 
