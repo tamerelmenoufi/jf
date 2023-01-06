@@ -159,9 +159,10 @@
     });
 
     $(".acao_dados").blur(function(){
-      campo = $(this).attr("id");
-      valor = $(this).val();
-      atual = $(this).attr("atual");
+      obj = $(this);
+      campo = obj.attr("id");
+      valor = obj.val();
+      atual = obj.attr("atual");
 
       if(atual == valor) return false;
       Carregando();
@@ -176,6 +177,7 @@
         },
         success:function(dados){
           // $.alert(dados)
+          obj.attr("atual", valor);
           Carregando('none');
         },
         error:function(){
