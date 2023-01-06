@@ -8,7 +8,7 @@
       $nom = md5($_POST['cod'])."{$ext}";
       if(file_put_contents("../../volume/indice_processo/{$nom}", $arq)){
         echo "update processos set JSON_SET(valida_indice_processo, '$.arquivo','{$nom}') where codigo = '{$_POST['cod']}'";
-        mysqli_query($con, "update processos set JSON_SET(valida_indice_processo, '$.arquivo','{$nom}') where codigo = '{$_POST['cod']}'");
+        mysqli_query($con, "update processos set valida_indice_processo = JSON_REPLACE(valida_indice_processo, '$.arquivo','{$nom}') where codigo = '{$_POST['cod']}'");
       }
       exit();
     }
