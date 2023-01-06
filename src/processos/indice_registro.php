@@ -95,19 +95,19 @@
 
     $dados = [
       // ID, TITLE, COL, VALUE
-      ['ch_arq', 'CH ARQ', 4, $v->ch_arq],
-      ['ic_pro', 'IC PRO', 4, $v->ic_pro],
-      ['pag', 'PAG', 4, $v->ic_pro],
-      ['ord', 'ORD', 4, $v->ic_pro],
-      ['proprietario', 'Proprietário', 4, $v->proprietario],
-      ['mun', 'MUM', 4, $v->mun],
-      ['dt_exp', 'DT EXP', 4, $v->data_td],
-      ['area', 'Área', 4, $v->area],
-      ['lv', 'LV', 4, $v->area],
-      ['folhas', 'Folhas', 4, $v->area],
-      ['rol', 'ROL', 4, $v->area],
-      ['blipts', 'BLIPTS', 4, $v->area],
-      ['sit', 'SIT', 4, $v->sit],
+      ['ch_arq', 'CH ARQ', 4, $v->ch_arq,'text',false],
+      ['ic_pro', 'IC PRO', 4, $v->ic_pro,'text',false],
+      ['pag', 'PAG', 4, $v->ic_pro,'text',false],
+      ['ord', 'ORD', 4, $v->ic_pro,'text',false],
+      ['proprietario', 'Proprietário', 4, $v->proprietario,'text',false],
+      ['mun', 'MUM', 4, $v->mun,'text',false],
+      ['dt_exp', 'DT EXP', 4, $v->data_td,'text',false],
+      ['area', 'Área', 4, $v->area,'text',false],
+      ['lv', 'LV', 4, $v->area,'text',false],
+      ['folhas', 'Folhas', 4, $v->area,'text',false],
+      ['rol', 'ROL', 4, $v->area,'text',false],
+      ['blipts', 'BLIPTS', 4, $v->area,'text',false],
+      ['sit', 'SIT', 4, $v->sit,'text',false],
 
     ];
 
@@ -123,11 +123,12 @@
       <div class="col-md-<?=$row[2]?>">
         <div class="form-floating mb-3">
           <input
-                type="text"
+                type="<?=$row[4]?>"
                 class="form-control is-<?=(($row[3])?'valid':'invalid')?> acao_dados"
                 id="<?=$row[0]?>"
                 value="<?="{$row[3]}"?>"
                 atual="<?="{$row[3]}"?>"
+                data-mask="<?="{$row[5]}"?>"
           >
           <label for="<?=$row[0]?>" class="form-label"><?=$row[1]?></label>
         </div>

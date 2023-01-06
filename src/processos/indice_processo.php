@@ -93,21 +93,21 @@
   <?php
 
     $dados = [
-      // ID, TITLE, COL, VALUE
-      ['ch_arq', 'CH ARQ', 4, $v->ch_arq],
-      ['fol', 'FOL', 4, $v->fol],
-      ['ic_pro', 'IC PRO', 4, $v->ic_pro],
-      ['proprietario', 'Proprietário', 4, $v->proprietario],
-      ['nome_imovel', 'Nome Imóvel', 4, $v->nome_imovel],
-      ['mun', 'MUM', 4, $v->mun],
-      ['com', 'COM', 4, $v->com],
-      ['loc', 'LOC', 4, $v->loc],
-      ['area', 'Área', 4, $v->area],
-      ['data_td', 'Data TD', 4, $v->data_td],
-      ['sit', 'SIT', 4, $v->sit],
-      ['est', 'EST', 4, $v->est],
-      ['part', 'PART', 4, $v->part],
-      ['cai', 'CAI', 4, $v->cai],
+      // ID, TITLE, COL, VALUE, TYPE, MASK
+      ['ch_arq', 'CH ARQ', 4, $v->ch_arq,'text',false],
+      ['fol', 'FOL', 4, $v->fol,'text',false],
+      ['ic_pro', 'IC PRO', 4, $v->ic_pro,'text',false],
+      ['proprietario', 'Proprietário', 4, $v->proprietario,'text',false],
+      ['nome_imovel', 'Nome Imóvel', 4, $v->nome_imovel,'text',false],
+      ['mun', 'MUM', 4, $v->mun,'text',false],
+      ['com', 'COM', 4, $v->com,'text',false],
+      ['loc', 'LOC', 4, $v->loc,'text',false],
+      ['area', 'Área', 4, $v->area,'text',false],
+      ['data_td', 'Data TD', 4, $v->data_td,'text',false],
+      ['sit', 'SIT', 4, $v->sit,'text',false],
+      ['est', 'EST', 4, $v->est,'text',false],
+      ['part', 'PART', 4, $v->part,'text',false],
+      ['cai', 'CAI', 4, $v->cai,'text',false],
     ];
 
   ?>
@@ -122,11 +122,12 @@
       <div class="col-md-<?=$row[2]?>">
         <div class="form-floating mb-3">
           <input
-                type="text"
+                type="<?="{$row[4]}"?>"
                 class="form-control is-<?=(($row[3])?'valid':'invalid')?> acao_dados"
                 id="<?=$row[0]?>"
                 value="<?="{$row[3]}"?>"
                 atual="<?="{$row[3]}"?>"
+                data-mask="<?="{$row[5]}"?>"
           >
           <label for="<?=$row[0]?>" class="form-label"><?=$row[1]?></label>
         </div>
