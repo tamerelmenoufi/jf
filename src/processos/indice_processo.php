@@ -7,7 +7,7 @@
       $ext = substr($_POST['name'], strrpos($_POST['name'],'.'), strlen($_POST['name']));
       $nom = md5($_POST['cod'])."{$ext}";
       if(file_put_contents("../../volume/indice_processo/{$nom}", $arq)){
-        mysqli_query($con, "update processos set valida_indice_processo = '{$nom}' where codigo = '{$_POST['cod']}'");
+        mysqli_query($con, "update processos set JSON_SET(valida_indice_processo, '$.arquivo','{$nom}') where codigo = '{$_POST['cod']}'");
       }
       exit();
     }
@@ -15,6 +15,9 @@
     $query = "select * from processos where codigo = '{$_POST['cod']}'";
     $result = mysqli_query($con, $query);
     $d = mysqli_fetch_object($result);
+
+    $v = json_decode($d->valida_indice_processo);
+
 ?>
 <style>
   .tela_cheia{
@@ -66,7 +69,7 @@
           <i class="fa-solid fa-maximize acao_tela_cheia"></i>
           <i class="fa-solid fa-close acao_tela_min"></i>
         </div>
-        <object data="../../volume/indice_processo/<?=$d->valida_indice_processo?>" type="" class="mt-3 mb-3 h-100 w-100" ></object>
+        <object data="../../volume/indice_processo/<?=$v->arquivo?>" type="" class="mt-3 mb-3 h-100 w-100" ></object>
       </div>
 
       <input type="file" class="form-control" placeholder="Banner" accept="image/jpeg,image/gif,image/png,application/pdf,image/x-eps">
@@ -88,7 +91,7 @@
       ['ic_pro', 'IC PRO', 4],
       ['proprietario', 'Proprietário', 4],
       ['nome_imovel', 'Nome Imóvel', 4],
-      ['mun', 'NUM', 4],
+      ['mun', 'MUM', 4],
       ['com', 'COM', 4],
       ['loc', 'LOC', 4],
       ['area', 'Área', 4],
