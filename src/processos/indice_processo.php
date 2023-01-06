@@ -1,6 +1,12 @@
 <?php
     include("{$_SERVER['DOCUMENT_ROOT']}/jf/lib/includes.php");
 
+    if($_POST['acao'] == 'valor_campo'){
+        $q = "update processos set valida_indice_processo = JSON_SET(valida_indice_processo, '$.{$_POST['campo']}','{$_POST['valor']}') where codigo = '{$_POST['cod']}'";
+        mysqli_query($con, $q);
+        exit();
+    }
+
     if($_POST['acao'] == 'indice_processo'){
       $arq = str_replace("data:{$_POST['type']};base64,",false,$_POST['Base64']);
       $arq = base64_decode(trim($arq));
@@ -113,7 +119,7 @@
       ?>
       <div class="col-md-<?=$row[2]?>">
         <div class="form-floating mb-3">
-          <input type="text" class="form-control is-valid" id="<?=$row[0]?>" >
+          <input type="text" class="form-control is-valid acao_dados" id="<?=$row[0]?>" value="<?=$v->$row[0]?>" >
           <label for="<?=$row[0]?>" class="form-label"><?=$row[1]?></label>
         </div>
       </div>
@@ -142,6 +148,31 @@
       $("div[showImage]").removeClass("tela_cheia");
       $(this).css("display","none");
       $(".acao_tela_cheia").css("display","inline");
+    });
+
+    $(".acao_dados").blur(function(){
+      campo = $(this).attr("id");
+      valor = $(this).val();
+
+      $.ajax({
+        url:"src/processos/indice_processo.php",
+        type:"POST",
+        data:{
+          cod:'<?=$_POST['cod']?>',
+          campo,
+          valor,
+          acao:'valor_campo'
+        },
+        success:function(dados){
+          // $.alert(dados)
+          Carregando('none');
+        },
+        error:function(){
+          Carregando('none');
+          $.alert('erro')
+        }
+      });
+
     });
 
   })
