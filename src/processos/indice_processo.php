@@ -109,11 +109,12 @@
       foreach($dados as $ind => $row){
       ?>
       <div class="col-md-<?=$row[2]?>">
-        <div class="mb-3">
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control is-valid" id="<?=$row[0]?>" >
           <label for="<?=$row[0]?>" class="form-label"><?=$row[1]?></label>
-          <input type="text" class="form-control" id="<?=$row[0]?>" >
         </div>
       </div>
+
       <?php
       }
       ?>
