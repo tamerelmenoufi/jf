@@ -112,7 +112,7 @@
   ?>
 
   <li class="list-group-item">
-    <h5>Registros Complementares</h5>
+    <h5>Registros Complementares <?=$v->ch_arq?></h5>
 
     <div class="row">
       <?php
@@ -120,7 +120,7 @@
       ?>
       <div class="col-md-<?=$row[2]?>">
         <div class="form-floating mb-3">
-          <input type="text" class="form-control is-valid acao_dados" id="<?=$row[0]?>" value="<?="{$v->ch_arq}"?>" >
+          <input type="text" class="form-control is-valid acao_dados" id="<?=$row[0]?>" value="<?="{$v->$row[0]}"?>" >
           <label for="<?=$row[0]?>" class="form-label"><?=$row[1]?></label>
         </div>
       </div>
