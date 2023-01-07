@@ -37,7 +37,7 @@
 
     $v = json_decode($d->valida_indice_registro);
 
-    var_dump($v);
+    // var_dump($v);
 
 ?>
 <style>
