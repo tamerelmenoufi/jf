@@ -177,12 +177,15 @@
                                     let myOffCanvas = document.getElementById('offcanvasDireita');
                                     let openedCanvas = bootstrap.Offcanvas.getInstance(myOffCanvas);
                                     openedCanvas.hide();
+                                    Carregando('none');
+
                                 }
                             });
+
                         // }
                     },
                     error:function(erro){
-
+                        Carregando('none');
                         $.alert('Ocorreu um erro!' + erro.toString());
                         //dados de teste
                     }
