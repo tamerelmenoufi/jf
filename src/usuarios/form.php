@@ -76,14 +76,14 @@
                 <?php
                 if($d->codigo != 1 and $_SESSION['usuario']->perfil == 'adm'){
                 ?>
-                <div class="form-floating mb-3">
+                <!-- <div class="form-floating mb-3">
                     <select name="perfil" class="form-control" id="perfil">
                         <option value="usr" <?=(($d->perfil == 'usr')?'selected':false)?>>Usuário</option>
                         <option value="adm" <?=(($d->perfil == 'adm')?'selected':false)?>>Administrador</option>
                         <option value="crd" <?=(($d->perfil == 'crd')?'selected':false)?>>Coordenador</option>
                     </select>
                     <label for="email">Perfil</label>
-                </div>
+                </div> -->
 
                 <div class="form-floating mb-3">
                     <input type="text" name="login" id="login" class="form-control" placeholder="Login" value="<?=$d->login?>">
@@ -100,7 +100,7 @@
                 if($d->codigo != 1 and $_SESSION['usuario']->perfil == 'adm' ){
                 ?>
 
-                <div class="form-floating mb-3">
+                <!-- <div class="form-floating mb-3">
                     <select name="coordenador" id="coordenador" class="form-control" placeholder="Coordenador">
                         <option value="">::Selecione o Coordenador::</option>
                         <?php
@@ -114,7 +114,7 @@
                         ?>
                     </select>
                     <label for="coordenador">Coordenador</label>
-                </div>
+                </div> -->
 
                 <div class="form-floating mb-3">
                     <select name="situacao" class="form-control" id="situacao">
