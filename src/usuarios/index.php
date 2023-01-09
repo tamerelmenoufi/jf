@@ -53,7 +53,7 @@
               </thead>
               <tbody>
                 <?php
-                  $query = "select * from usuarios order by nome asc";
+                  echo $query = "select * from usuarios order by nome asc";
                   $result = mysqli_query($con, $query);
                   while($d = mysqli_fetch_object($result)){
                 ?>
