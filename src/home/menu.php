@@ -31,7 +31,7 @@
         </li>
       </ul>
       <span class="navbar-text">
-        Administrador do Sistema
+        <?=$_SESSION['usuario']->nome?>
         <a href="./?s=1" style="text-decoration:none; color:red; margin-left:30px;">Sair</a>
       </span>
     </div>
