@@ -1,3 +1,8 @@
+<style>
+  a{
+    cursor: pointer;
+  }
+</style>
 <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
   <div class="offcanvas-header">
     <img src="img/logo-topo.png" style="height:100px;" alt="">
@@ -32,21 +37,6 @@
       </div>
     </div>
 
-    <div class="row mb-1">
-      <div class="col">
-        <a url="src/clientes/index.php" class="text-decoration-none" data-bs-dismiss="offcanvas" aria-label="Close">
-          <i class="fa-solid fa-clipboard-list"></i> Clientes
-        </a>
-      </div>
-    </div>
-
-    <div class="row mb-1">
-      <div class="col">
-        <a url="src/produtos_categorias/index.php" class="text-decoration-none" data-bs-dismiss="offcanvas" aria-label="Close">
-          <i class="fa-solid fa-clipboard-list"></i> Produtos / Serviços
-        </a>
-      </div>
-    </div>
 
 
   </div>
