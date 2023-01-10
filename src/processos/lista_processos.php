@@ -18,7 +18,7 @@
         <tr>
             <th>Processo</th>
             <th>Requerente</th>
-            <th>Ação</th>
+            <th style="text-right">Ação</th>
         </tr>
     </thead>
     <tbody>
