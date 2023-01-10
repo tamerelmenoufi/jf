@@ -78,9 +78,9 @@
 ?>
 
     <div>Registro do índice do processo</div>
-    <a
+    <a style="dispaly:<?=(($v->arquivo_origem)?'inline':'none')?>"
       ArqOrg="http://moh1.com.br/jf/SIGLO_AM/CONVENIO%202000/08-Titulos%20Plotados/AM/01-Livros/02_Livros%20de%20Registro/"
-      href="<?=(($v->arquivo_origem)?"http://moh1.com.br/jf/SIGLO_AM/CONVENIO%202000/08-Titulos%20Plotados/AM/01-Livros/02_Livros%20de%20Registro/".$v->arquivo_origem:'#')?>"
+      href="http://moh1.com.br/jf/SIGLO_AM/CONVENIO%202000/08-Titulos%20Plotados/AM/01-Livros/02_Livros%20de%20Registro/<?=$v->arquivo_origem?>"
       target="_blank" style="text-decoration:none;">PDF Origem <i class="fa-regular fa-file-pdf"></i></a>
   </li>
 
@@ -212,8 +212,12 @@
     $("#arquivo_origem").change(function(){
       opc = $(this).val();
       cam = $("a[ArqOrg]").attr("ArqOrg");
-
       $("a[ArqOrg]").attr("href",`${cam}${opc}`);
+      if(opc){
+        $("a[ArqOrg]").css("display","inline");
+      }else{
+        $("a[ArqOrg]").css("display","none");
+      }
 
     });
 
