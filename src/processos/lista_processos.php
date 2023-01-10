@@ -18,7 +18,7 @@
         <tr>
             <th>Processo</th>
             <th>Requerente</th>
-            <th style="text-right">Ação</th>
+            <th class="text-end">Ação</th>
         </tr>
     </thead>
     <tbody>
@@ -28,7 +28,7 @@
         <tr >
             <td><?=$d->processo?></td>
             <td><?=$d->requerente?></td>
-            <td>
+            <td class="text-end">
                 <button
                     class="btn btn-secondary"
                     data-bs-toggle="offcanvas"
