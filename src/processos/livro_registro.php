@@ -75,14 +75,13 @@
 
 <?php
   $lista = file("http://moh1.com.br/jf/SIGLO_AM/CONVENIO%202000/08-Titulos%20Plotados/AM/01-Livros/02_Livros%20de%20Registro/lista.txt");
-
-  foreach($lista as $i => $v){
-    echo $v.", ";
-  }
 ?>
 
     <div>Registro do índice do processo</div>
-    <a href="http://moh1.com.br/jf/SIGLO_AM/CONVENIO%202000/08-Titulos%20Plotados/AM/01-Livros/02_Livros%20de%20Registro/Livro%2003%20Tratado.pdf" target="_blank" style="text-decoration:none;">PDF Origem <i class="fa-regular fa-file-pdf"></i></a>
+    <a
+      ArqOrg="http://moh1.com.br/jf/SIGLO_AM/CONVENIO%202000/08-Titulos%20Plotados/AM/01-Livros/02_Livros%20de%20Registro/"
+      href="http://moh1.com.br/jf/SIGLO_AM/CONVENIO%202000/08-Titulos%20Plotados/AM/01-Livros/02_Livros%20de%20Registro/<?=$v->arquivo_origem?>"
+      target="_blank" style="text-decoration:none;">PDF Origem <i class="fa-regular fa-file-pdf"></i></a>
   </li>
 
 
@@ -129,9 +128,11 @@
     //   ['est', 'EST', 4, $v->est,'text',false],
     //   ['part', 'PART', 4, $v->part,'text',false],
     //   ['cai', 'CAI', 4, $v->cai,'text',false],
-      ['lv', 'LV', 4, $v->lv,'text',false],
-      ['folhas', 'Folhas', 4, $v->folhas,'text',false],
-      ['pag_pdf_orig', 'Página no PDF de Origem', 4, $v->pag_pdf_orig,'text',false],
+
+      ['Arquivo Origem', 'arquivo_origem', 3, $v->arquivo_origem,'select',false],
+      ['lv', 'LV', 3, $v->lv,'text',false],
+      ['folhas', 'Folhas', 3, $v->folhas,'text',false],
+      ['pag_pdf_orig', 'Página no PDF de Origem', 3, $v->pag_pdf_orig,'text',false],
       ['detalhes', 'Informações/Detalhes', 12, $v->detalhes,'textarea',false],
     ];
 
@@ -155,6 +156,20 @@
                 id="<?=$row[0]?>"
                 atual="<?="{$row[3]}"?>"
           ><?="{$row[3]}"?></textarea>
+          <?php
+          }else if(strtolower($row[4]) == 'select'){
+          ?>
+          <select name="<?=$row[0]?>" id="<?=$row[0]?>" class="form-control">
+            <option value="">::Arquivo::</option>
+            <?php
+              foreach($lista as $i => $val){
+            ?>
+            <option value="<?=$val?>" <?=(($v->arquivo_origem == $val)?'selected':false)?>><?=$val?></option>
+            <?php
+              }
+            ?>
+          </select>
+          <label for="<?=$row[0]?>" class="form-label"><?=$row[1]?></label>
           <?php
           }else{
           ?>
@@ -193,6 +208,14 @@
             $(this).mask(mask);
         }
     })
+
+    $("#arquivo_origem").change(function(){
+      opc = $(this).val();
+      cam = $("a[ArqOrg]").attr("ArqOrg");
+
+      $("a[ArqOrg]").attr("href",`${cam}${opc}`);
+
+    });
 
     $(".acao_tela_cheia").click(function(){
       $("div[showImage]").addClass("tela_cheia");
