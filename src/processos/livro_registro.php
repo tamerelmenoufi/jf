@@ -81,7 +81,7 @@
     <a
       ArqOrg="http://moh1.com.br/jf/SIGLO_AM/CONVENIO%202000/08-Titulos%20Plotados/AM/01-Livros/02_Livros%20de%20Registro/"
       href="http://moh1.com.br/jf/SIGLO_AM/CONVENIO%202000/08-Titulos%20Plotados/AM/01-Livros/02_Livros%20de%20Registro/<?=$v->arquivo_origem?>"
-      target="_blank" style="text-decoration:none; dispaly:<?=(($v->arquivo_origem)?'inline':'none')?>">PDF Origem <i class="fa-regular fa-file-pdf"></i></a>
+      target="_blank" style="text-decoration:none; display:<?=(($v->arquivo_origem)?'inline':'none')?>">PDF Origem <i class="fa-regular fa-file-pdf"></i></a>
   </li>
 
 
