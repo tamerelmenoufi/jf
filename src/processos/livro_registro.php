@@ -74,7 +74,11 @@
   <li class="list-group-item d-flex justify-content-between">
 
 <?php
-  echo $lista = file("http://moh1.com.br/jf/SIGLO_AM/CONVENIO%202000/08-Titulos%20Plotados/AM/01-Livros/02_Livros%20de%20Registro/lista.txt");
+  $lista = file("http://moh1.com.br/jf/SIGLO_AM/CONVENIO%202000/08-Titulos%20Plotados/AM/01-Livros/02_Livros%20de%20Registro/lista.txt");
+
+  foreach($lista as $i => $v){
+    echo $v.", ";
+  }
 ?>
 
     <div>Registro do índice do processo</div>
