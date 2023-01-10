@@ -214,6 +214,7 @@
       cam = $("a[ArqOrg]").attr("ArqOrg");
 
       $("a[ArqOrg]").attr("href",`${cam}${opc}`);
+      console.log(`${cam}${opc}`)
 
     });
 
