@@ -13,7 +13,7 @@
     <!-- <h5>Consultoria</h5> -->
     <div class="row">
       <div class="col">
-        <a url="src/home/index.php" class="text-decoration-none" data-bs-dismiss="offcanvas" aria-label="Close">
+        <a url="src/home/home.php" class="text-decoration-none" data-bs-dismiss="offcanvas" aria-label="Close">
           <i class="fa-solid fa-clipboard-list"></i> Dashboard
         </a>
       </div>
