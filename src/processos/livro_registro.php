@@ -159,7 +159,7 @@
           <?php
           }else if(strtolower($row[4]) == 'select'){
           ?>
-          <select name="<?=$row[0]?>" id="<?=$row[0]?>" class="form-control">
+          <select name="<?=$row[0]?>" id="<?=$row[0]?>" class="form-control is-<?=(($row[3])?'valid':'invalid')?> acao_dados">
             <option value="">::Arquivo::</option>
             <?php
               foreach($lista as $i => $val){
