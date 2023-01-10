@@ -129,7 +129,7 @@
     //   ['part', 'PART', 4, $v->part,'text',false],
     //   ['cai', 'CAI', 4, $v->cai,'text',false],
 
-      ['Arquivo Origem', 'arquivo_origem', 3, $v->arquivo_origem,'select',false],
+      ['arquivo_origem', 'Arquivo Origem', 3, $v->arquivo_origem,'select',false],
       ['lv', 'LV', 3, $v->lv,'text',false],
       ['folhas', 'Folhas', 3, $v->folhas,'text',false],
       ['pag_pdf_orig', 'Página no PDF de Origem', 3, $v->pag_pdf_orig,'text',false],
