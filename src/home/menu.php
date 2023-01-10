@@ -18,7 +18,7 @@
     <div class="collapse navbar-collapse" id="navbarText">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <span class="nav-link" url="src/home/index.php">Resumo do projeto</span>
+          <span class="nav-link" url="src/home/home.php">Resumo do projeto</span>
         </li>
         <li class="nav-item">
           <span class="nav-link" url="src/home/plataforma_gestao.php">Plataformas de Gestão</span>
