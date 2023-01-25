@@ -16,8 +16,11 @@
                 <li><a class="dropdown-item" href="#">Separated link</a></li> -->
             </ul>
             <input type="text" class="form-control" id="busca_processo">
-            <button class="btn btn-secondary buscar_resultado" >
+            <button class="btn btn-success buscar_resultado" >
                 Buscar
+            </button>
+            <button class="btn btn-secondary cadastro_processo" >
+                Cadastro
             </button>
         </div>
 
@@ -64,5 +67,21 @@
 
 
         });
+
+
+        $(".cadastro_processo").click(function(){
+
+
+            $.ajax({
+                url:`src/processos/cadastro_processo.php`,
+                success:function(dados){
+                    $(".pesquisa_resultado").html(dados)
+                }
+            });
+
+
+        });
+
+
     })
 </script>
