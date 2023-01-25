@@ -2,7 +2,7 @@
     include("{$_SERVER['DOCUMENT_ROOT']}/jf/lib/includes.php");
 
     if($_POST['acao'] == 'processo'){
-        $q = "INSERT INTO processos set processo = '{$_POST['processo']}', valida_indice_registro = '{}'";
+        $q = "INSERT INTO processos set processo = '{$_POST['processo']}', valida_indice_processo = '{}', valida_indice_registro = '{}', valida_livro_registro = '{}'";
         mysqli_query($con, $q);
         // echo $cod = mysqli_insert_id($con);
 
