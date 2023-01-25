@@ -49,6 +49,11 @@
 
       processo = $("#numero_processo").val();
 
+      console.log(processo)
+      console.log(processo.length)
+
+      return
+
       if(!processo && processo.length <= 3) {
         $.alert('Digite o número do processo!')
         return false;
