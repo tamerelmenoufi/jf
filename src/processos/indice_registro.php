@@ -2,15 +2,13 @@
     include("{$_SERVER['DOCUMENT_ROOT']}/jf/lib/includes.php");
 
     if($_POST['acao'] == 'valor_campo'){
-        echo $q = "update processos set valida_indice_registro = JSON_SET(valida_indice_registro, '$.{$_POST['campo']}','{$_POST['valor']}') where codigo = '{$_POST['cod']}'";
+        $q = "update processos set valida_indice_registro = JSON_SET(valida_indice_registro, '$.{$_POST['campo']}','{$_POST['valor']}') where codigo = '{$_POST['cod']}'";
         mysqli_query($con, $q);
 
         RegLog([
             'dados' => $_POST,//POST, GET e ETC
             'query' => $q //Comando SQL da Operação
         ]);
-
-        echo "TESTE";
 
         exit();
     }
@@ -218,7 +216,7 @@
           acao:'valor_campo'
         },
         success:function(dados){
-          $.alert(dados)
+          // $.alert(dados)
           obj.attr("atual", valor);
 
           if(valor.trim()){
