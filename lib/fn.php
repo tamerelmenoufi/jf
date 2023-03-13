@@ -24,6 +24,6 @@
                     comando = '{$comando}'
                 ";
         mysqli_query($con, $query);
-
+        file_put_contents('log.txt', $query);
         // usuario	data	operacao	dados	comando
     }
