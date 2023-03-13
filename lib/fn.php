@@ -17,7 +17,7 @@
         $comando = base64_encode(trim($g['query']));
 
         $query = "INSERT INTO `logs` set
-                    usuario = '{$_SESSION['usuario']}',
+                    usuario = '{$_SESSION['usuario']->codigo}',
                     data = NOW(),
                     operacao = '{$op}',
                     dados = '{$dados}',
