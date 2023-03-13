@@ -16,7 +16,7 @@
         $op = strtoupper(substr(trim($g['query']),0,strpos(trim($g['query']), ' ')));
         $comando = base64_encode(trim($g['query']));
 
-        echo $query = "INSERT INTO `logs` set
+        $query = "INSERT INTO `logs` set
                     usuario = '{$_SESSION['usuario']}',
                     data = NOW(),
                     operacao = '{$op}',
