@@ -1,8 +1,8 @@
 <?php
     session_start();
     include("connect.php");
-    include("fn.php");
     $con = AppConnect('app');
+    include("fn.php");
     $md5 = md5(date("YmdHis"));
 
     // if($_POST['acao'] == 'login'){
