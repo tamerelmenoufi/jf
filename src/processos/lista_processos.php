@@ -16,7 +16,7 @@
     }
 
 
-    echo $query = "select * from processos where {$campo} LIKE '%{$_POST['busca']}%' limit 100";
+    $query = "select *, JSON_EXTRACT(valida_indice_processo, '$.nome_imovel') as denominacao from processos where {$campo} LIKE '%{$_POST['busca']}%' limit 100";
     $result = mysqli_query($con, $query);
     $n = mysqli_num_rows($result);
     if(!$n){
@@ -32,6 +32,7 @@
         <tr>
             <th>Processo</th>
             <th>Requerente</th>
+            <th>Denominação</th>
             <th class="text-end">Ação</th>
         </tr>
     </thead>
@@ -42,6 +43,7 @@
         <tr >
             <td><?=$d->processo?></td>
             <td><?=$d->requerente?></td>
+            <td><?=$d->denominacao?></td>
             <td class="text-end">
                 <button
                     class="btn btn-secondary"
