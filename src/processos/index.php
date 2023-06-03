@@ -9,8 +9,8 @@
         <div class="input-group mb-3">
             <button class="btn btn-outline-secondary dropdown-toggle select_ativo_busca" type="button" data-bs-toggle="dropdown" aria-expanded="false">Requerente</button>
             <ul class="dropdown-menu">
-                <li><a class="dropdown-item select_busca" href="#" >Processo</a></li>
-                <li><a class="dropdown-item select_busca" href="#">Requerente</a></li>
+                <li><a class="dropdown-item select_busca" href="#" campo="processo" >Processo</a></li>
+                <li><a class="dropdown-item select_busca" href="#" campo="requerente">Requerente</a></li>
                 <!-- <li><a class="dropdown-item" href="#">Something else here</a></li>
                 <li><hr class="dropdown-divider"></li>
                 <li><a class="dropdown-item" href="#">Separated link</a></li> -->
@@ -41,7 +41,7 @@
         });
 
         $(".buscar_resultado").click(function(){
-            campo = $(".select_ativo_busca").text()
+            campo = $(".select_ativo_busca").attr("campo")
             busca = $("#busca_processo").val();
             // $.alert(opc)
             if(campo && busca && busca.length <= 3){

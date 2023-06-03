@@ -1,8 +1,22 @@
 <?php
     include("{$_SERVER['DOCUMENT_ROOT']}/jf/lib/includes.php");
 
+    switch ($_POST['campo']) {
+        case 'processo':
+            $campo = "{$_POST['campo']}";
+            break;
 
-    $query = "select * from processos where {$_POST['campo']} LIKE '%{$_POST['busca']}%' limit 100";
+        case 'requerente':
+            $campo = "{$_POST['campo']}";
+            break;
+
+        case 'nome_imovel':
+            $campo = "JSON_EXTRACT(valida_indice_processo, '$.{$_POST['campo']})";
+            break;
+    }
+
+
+    $query = "select * from processos where {$campo} LIKE '%{$_POST['busca']}%' limit 100";
     $result = mysqli_query($con, $query);
     $n = mysqli_num_rows($result);
     if(!$n){
