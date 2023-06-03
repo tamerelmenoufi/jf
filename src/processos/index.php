@@ -11,6 +11,7 @@
             <ul class="dropdown-menu">
                 <li><a class="dropdown-item select_busca" href="#" campo="processo" >Processo</a></li>
                 <li><a class="dropdown-item select_busca" href="#" campo="requerente">Requerente</a></li>
+                <li><a class="dropdown-item select_busca" href="#" campo="nome_imovel">Denominação</a></li>
                 <!-- <li><a class="dropdown-item" href="#">Something else here</a></li>
                 <li><hr class="dropdown-divider"></li>
                 <li><a class="dropdown-item" href="#">Separated link</a></li> -->
