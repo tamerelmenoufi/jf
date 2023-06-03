@@ -7,7 +7,7 @@
 
 
         <div class="input-group mb-3">
-            <button class="btn btn-outline-secondary dropdown-toggle select_ativo_busca" type="button" data-bs-toggle="dropdown" aria-expanded="false">Requerente</button>
+            <button class="btn btn-outline-secondary dropdown-toggle select_ativo_busca" type="button" data-bs-toggle="dropdown" aria-expanded="false" campo="processo">Requerente</button>
             <ul class="dropdown-menu">
                 <li><a class="dropdown-item select_busca" href="#" campo="processo" >Processo</a></li>
                 <li><a class="dropdown-item select_busca" href="#" campo="requerente">Requerente</a></li>
@@ -37,8 +37,10 @@
 <script>
     $(function(){
         $(".select_busca").click(function(){
-            opc = $(this).text();
-            $(".select_ativo_busca").text(opc)
+            rotulo = $(this).text();
+            campo = $(this).attr("campo");
+            $(".select_ativo_busca").text(rotulo)
+            $(".select_ativo_busca").attr("campo",campo)
         });
 
         $(".buscar_resultado").click(function(){
