@@ -16,7 +16,7 @@
     }
 
 
-    $query = "select * from processos where {$campo} LIKE '%{$_POST['busca']}%' limit 100";
+    echo $query = "select * from processos where {$campo} LIKE '%{$_POST['busca']}%' limit 100";
     $result = mysqli_query($con, $query);
     $n = mysqli_num_rows($result);
     if(!$n){
