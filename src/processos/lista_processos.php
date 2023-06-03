@@ -11,7 +11,7 @@
             break;
 
         case 'nome_imovel':
-            $campo = "JSON_EXTRACT(valida_indice_processo, '$.{$_POST['campo']})";
+            $campo = "JSON_EXTRACT(valida_indice_processo, '$.{$_POST['campo']}')";
             break;
     }
 
