@@ -1,4 +1,5 @@
 <?php
+    $home = true;
     include("{$_SERVER['DOCUMENT_ROOT']}/jf/lib/includes.php");
 
     if($_GET['s']){
