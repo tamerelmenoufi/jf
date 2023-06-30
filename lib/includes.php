@@ -6,7 +6,7 @@
     $md5 = md5(date("YmdHis"));
 
     if(!$_SESSION['usuario'] and !$home){
-        header("location:./");
+        echo "<script>window.location.href='http://consultoria.mohatron.com/'</script>";
         exit();
     }
 
