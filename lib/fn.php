@@ -19,11 +19,11 @@
         $query = "INSERT INTO `logs` set
                     usuario = '{$_SESSION['usuario']->codigo}',
                     data = NOW(),
-                    operacao = '{$op}',
+                    acao = '{$op}',
                     dados = '{$dados}',
                     comando = '{$comando}'
                 ";
         mysqli_query($con, $query);
-        file_put_contents("{$_SERVER['DOCUMENT_ROOT']}/jf/log.txt", $query);
+        // file_put_contents("{$_SERVER['DOCUMENT_ROOT']}/jf/log.txt", $query);
         // usuario	data	operacao	dados	comando
     }
